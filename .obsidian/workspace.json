@@ -15,7 +15,7 @@
               "state": {
                 "file": "src/SUMMARY.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "392e0cc5c30edbed",
   "lastOpenFiles": [
-    "src/chapter_1.md",
+    "src/introduction/history.md",
     "src/SUMMARY.md",
+    "src/introduction",
     "README.md",
     "book.toml",
     "book",
