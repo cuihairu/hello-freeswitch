@@ -1,0 +1,93 @@
+[
+  {
+    "text": "引言",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "电话的发展史",
+        "link": "/introduction/history"
+      },
+      {
+        "text": "什么是FreeSWITCH",
+        "link": "/introduction/what-is-freeswitch"
+      },
+      {
+        "text": "FreeSWITCH的应用场景",
+        "link": "/introduction/scenarios"
+      }
+    ]
+  },
+  {
+    "text": "FreeSWITCH安装与配置",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "FreeSWITCH 的安装",
+        "link": "/installation/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "在 Linux 上安装",
+            "link": "/installation/linux"
+          },
+          {
+            "text": "在 Windows 上安装",
+            "link": "/installation/windows"
+          }
+        ]
+      },
+      {
+        "text": "FreeSWITCH 的基本配置",
+        "link": "/configuration/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "配置文件结构",
+            "link": "/configuration/config-files"
+          },
+          {
+            "text": "核心配置文件",
+            "link": "/configuration/core-files"
+          },
+          {
+            "text": "网络设置",
+            "link": "/configuration/network"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "FreeSWITCH 核心概念",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "会话 (Session)",
+        "link": "/concepts/session"
+      },
+      {
+        "text": "呼叫 (Call)",
+        "link": "/concepts/call"
+      },
+      {
+        "text": "通道 (Channel)",
+        "link": "/concepts/channel"
+      },
+      {
+        "text": "路由与拨号计划 (Dialplan)",
+        "link": "/concepts/dialplan",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "静态拨号计划",
+            "link": "/concepts/static-dialplan"
+          },
+          {
+            "text": "动态拨号计划",
+            "link": "/concepts/dynamic-dialplan"
+          }
+        ]
+      }
+    ]
+  }
+]
