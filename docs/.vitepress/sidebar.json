@@ -89,5 +89,89 @@
         ]
       }
     ]
+  },
+  {
+    "text": "模块详解",
+    "link": "/modules/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "SIP 模块",
+        "link": "/modules/sip"
+      },
+      {
+        "text": "IVR 模块",
+        "link": "/modules/ivr"
+      },
+      {
+        "text": "会议模块",
+        "link": "/modules/conference"
+      },
+      {
+        "text": "网关模块",
+        "link": "/modules/gateway"
+      },
+      {
+        "text": "媒体处理模块",
+        "link": "/modules/media"
+      }
+    ]
+  },
+  {
+    "text": "进阶应用",
+    "link": "/advanced/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "事件系统",
+        "link": "/advanced/events"
+      },
+      {
+        "text": "录音与监听",
+        "link": "/advanced/recording"
+      },
+      {
+        "text": "脚本与编程接口",
+        "link": "/advanced/scripting"
+      }
+    ]
+  },
+  {
+    "text": "实战项目：智能客服",
+    "link": "/project/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "语音识别与合成",
+        "link": "/project/asr-tts"
+      },
+      {
+        "text": "自然语言处理",
+        "link": "/project/nlp"
+      },
+      {
+        "text": "实现智能客服功能",
+        "link": "/project/implementation"
+      },
+      {
+        "text": "部署与运维",
+        "link": "/project/deployment"
+      }
+    ]
+  },
+  {
+    "text": "附录",
+    "link": "/appendix/configuration-files",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "常用命令与工具",
+        "link": "/appendix/commands"
+      },
+      {
+        "text": "资源与参考文献",
+        "link": "/appendix/resources"
+      }
+    ]
   }
 ]
