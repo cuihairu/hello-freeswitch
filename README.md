@@ -1,9 +1,11 @@
 <div align="center">
 
-<!-- 品牌资产空位：logo.svg 到位后启用 -->
-<!-- <img src="docs/public/logo.svg" width="96" alt="hello-freeswitch logo" /> -->
+<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
 
 # Hello FreeSWITCH
+
+<p align="center"><img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /></p>
+<p align="center"><img src="docs/public/badges/license.svg" alt="CC BY 4.0" /></p>
 
 FreeSWITCH 知识手册 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/)
 
@@ -12,9 +14,6 @@ FreeSWITCH 知识手册 · [在线阅读](https://cuihairu.github.io/hello-frees
 ---
 
 从安装配置、核心概念与拨号计划，到模块详解、脚本与 ESL，再到智能客服项目实战的 FreeSWITCH 中文知识站点。
-
-<p align="center"><img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /></p>
-<p align="center"><img src="docs/public/badges/license.svg" alt="CC BY 4.0" /></p>
 
 ## 本地开发
 
