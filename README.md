@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.zh.md)
+
 <div align="center">
 
 <p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> </p>
@@ -11,23 +13,23 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-FreeSWITCH 知识手册 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/)
+FreeSWITCH Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-freeswitch/)
 
 </div>
 
 ---
 
-从安装配置、核心概念与拨号计划，到模块详解、脚本与 ESL，再到智能客服项目实战的 FreeSWITCH 中文知识站点。
+A Chinese-language FreeSWITCH knowledge site covering installation and configuration, core concepts and the dial plan, module deep dives, scripts and ESL, and hands-on projects including an intelligent customer-service bot.
 
-## 本地开发
+## Local Development
 
 ```bash
-npm install          # 安装依赖
-npm run docs:dev     # 本地开发
-npm run docs:build   # 构建到 docs/.vitepress/dist
-npm run docs:preview # 本地预览构建产物
+npm install          # Install dependencies
+npm run docs:dev     # Local development
+npm run docs:build   # Build to docs/.vitepress/dist
+npm run docs:preview # Preview the build locally
 ```
 
 ## License
 
-本作品采用 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) 许可协议发布。
+This work is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license.
