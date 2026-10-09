@@ -9,6 +9,16 @@ export default defineConfig({
   base: '/hello-freeswitch/',
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://cuihairu.github.io',
+    // alpha 版把不带 base 的绝对路径交给 sitemap 库解析，会吞掉 base；此钩子把前缀补回
+    transformItems(items) {
+      return items.map((item) => ({
+        ...item,
+        url: '/hello-freeswitch' + (item.url.startsWith('/') ? item.url : `/${item.url}`)
+      }))
+    }
+  },
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-freeswitch/favicon.svg' }]
@@ -16,6 +26,20 @@ export default defineConfig({
 
   // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
   srcExclude: ['**/SUMMARY.md'],
+
+  // 每页补 og 分享 meta（返回值与原 head 合并，不会覆盖默认项）
+  // ctx.page 是 md 源路径而非输出 html（类型注释与实测不符），按 md 去后缀
+  transformHead({ page, title, description }) {
+    const route = '/' + page.replace(/\.md$/, '').replace(/(^|\/)index$/, '$1')
+    const url = encodeURI('https://cuihairu.github.io/hello-freeswitch' + (route === '/' ? '/' : route))
+    return [
+      ['meta', { property: 'og:type', content: 'website' }],
+      ['meta', { property: 'og:site_name', content: 'Hello FreeSWITCH' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: url }],
+    ]
+  },
 
   themeConfig: {
     logo: '/logo.svg',
