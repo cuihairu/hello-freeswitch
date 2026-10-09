@@ -28,7 +28,7 @@ FreeSWITCH 的官方主战场是 Linux 服务器。本节介绍支持的平台�
 /usr/local/freeswitch/bin/fs_cli -x "version"
 ```
 
-预期输出形如 `FreeSWITCH Version 1.10.x ...`。随后用 `fs_cli` 进入控制台（回车出现 `freeswitch@...>` 提示符），执行 `status` 查看运行状态，`bye` 或按 `Ctrl+D` 退出。
+预期输出形如 `FreeSWITCH Version 1.11.x ...`（随安装版本）。随后用 `fs_cli` 进入控制台（回车出现 `freeswitch@...>` 提示符），执行 `status` 查看运行状态，`bye` 或按 `Ctrl+D` 退出。
 
 ## 本节内容
 

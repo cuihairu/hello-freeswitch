@@ -68,7 +68,7 @@ export default defineConfig({
 
     footer: {
       message: 'Hello FreeSWITCH',
-      copyright: '© 2025 cuihairu'
+      copyright: '© 2026 cuihairu'
     },
 
     search: {

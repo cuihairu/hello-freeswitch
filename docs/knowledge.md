@@ -70,7 +70,7 @@
 
 ### 脚本出口：Lua 与 ESL
 
-- Lua 是 FreeSWITCH 1.10 唯一开箱即用的脚本引擎。老教程里常见的 `mod_spidermonkey`（JavaScript，API 命令 `jsrun`）从 1.4 起就被移出源码，1.10 上跑不起来，查资料时注意甄别年代。见[脚本与编程接口](/advanced/scripting)。
+- Lua 是 FreeSWITCH 1.10 起唯一开箱即用的脚本引擎（mod_v8 在源码树里，但默认构建不启用）。老教程里常见的 `mod_spidermonkey`（JavaScript，API 命令 `jsrun`）从 1.4 起就被移出源码，1.10 上跑不起来，查资料时注意甄别年代。1.11.0 还移除了 `mod_python`（mod_python3 保留）与约 30 个遗留模块，并把正则迁移到 PCRE2。见[脚本与编程接口](/advanced/scripting)。
 - Lua 脚本有四种调用入口：dialplan application（`lua`，session 自动可用）、`lua` API（同步执行）、`luarun` API（后台线程，适合常驻脚本）、`startup-script`（随 FreeSWITCH 启动）。见[脚本与编程接口](/advanced/scripting)。
 - 脚本里任何操作前先判断 `session:ready()`，挂断后继续操作会抛错或静默失败；`playback` 的文件不存在会静默失败，排障时看 fs_cli 的 INFO 级日志。见[会话 (Session)](/concepts/session)。
 - ESL 是简单的文本协议：连接后服务端发 `auth/request`，客户端发 `auth ClueCon`，回 `+OK accepted` 后就能发 `event` 订阅、`api` 同步命令、`bgapi` 异步命令。只用 Python 标准库即可实现完整客户端。见[脚本与编程接口](/advanced/scripting)。
@@ -95,7 +95,7 @@
 | 《FreeSWITCH 权威指南》 | 杜金房等著 | 国内 FreeSWITCH 的标杆图书，从 SIP 基础到 ESL/脚本与生产实践，中文读者的首选系统教材 | [资源与参考文献](/appendix/resources.md) |
 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》 | 杜金房及各位贡献者（2016-2023，在线共创，仍在写作更新中） | 社区开源书，案例导向，在线阅读（book.dujinfang.com），无正式出版社 | [资源与参考文献](/appendix/resources.md) |
 
-英文书基于的版本偏旧（1.2 到 1.8），配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。中文社区资料版本跨度大（1.2 到 1.10 都有），引用配置片段时先确认版本，再用 vanilla 模板核实。见[资源与参考文献](/appendix/resources.md)。
+英文书基于的版本偏旧（1.2 到 1.8），配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。中文社区资料版本跨度大（1.2 到 1.11 都有），引用配置片段时先确认版本，再用 vanilla 模板核实；官方最新稳定为 1.11.3。见[资源与参考文献](/appendix/resources.md)。
 
 ## 官方文档要点（带链接）
 
@@ -105,7 +105,7 @@
 - [SignalWire 官方用户手册](https://developer.signalwire.com/freeswitch/)：分 12 个部分（Foundations、Configuration System、Call Routing、Media、Integration and Control、Module Reference、Troubleshooting、Programming 等），是当前最权威的文档入口。
 - [脚本集成章节](https://developer.signalwire.com/freeswitch/integration/scripting)：Lua/JS/Python 等脚本模块与 `lua` / `luarun` 两类命令的官方说明。
 - [嵌入式脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)：各语言脚本可用的对象与方法（session、event 等）。
-- [源码发布包](https://files.freeswitch.org/releases/freeswitch/)：各版本源码压缩包（含 1.10 系列）。
+- [源码发布包](https://files.freeswitch.org/releases/freeswitch/)：各版本源码压缩包（含 1.10 与 1.11 系列，最新稳定 1.11.3）。
 - [官方 GitHub 仓库](https://github.com/signalwire/freeswitch)：主仓库（SignalWire 赞助维护），Issue/PR 在此提交；vanilla 配置模板在 `conf/vanilla/`，systemd unit 在 `build/`。
 - [邮件列表](https://lists.freeswitch.org/)：freeswitch-users、freeswitch-dev 等，历史归档可全文检索，很多疑难杂症的答案都在旧帖里。
 - [ClueCon](https://www.cluecon.com/)：FreeSWITCH 创始团队创办的开发者大会，每年发布路线图与实战分享，演讲材料公开。
@@ -179,6 +179,7 @@ NLP 的三项基础能力是意图识别、实体抽取、对话管理，见[自
 ### 资料版本
 
 - 英文书基于 1.2 到 1.8，配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。见[资源与参考文献](/appendix/resources.md)。
-- 中文社区内容版本跨度大（1.2 到 1.10 都有），引用配置片段时先确认版本，再用 vanilla 模板核实。见[资源与参考文献](/appendix/resources.md)。
+- 中文社区内容版本跨度大（1.2 到 1.11 都有），引用配置片段时先确认版本，再用 vanilla 模板核实。见[资源与参考文献](/appendix/resources.md)。
+- 1.11 系列有破坏性变更：1.11.0 移除 `mod_python`（mod_python3 保留）与约 30 个遗留模块（mod_h26x、mod_portaudio、mod_rayo 等），正则引擎迁移到 PCRE2；引用 1.10 及更早教程的模块名与正则写法前，先到官方 Release 说明确认。见[脚本与编程接口](/advanced/scripting)、[资源与参考文献](/appendix/resources.md)。
 - 社区音频流模块（`mod_audio_stream`、`mod_audio_fork`）不在官方源码树与发行包里，需自行编译；这类仓库更迭频繁、镜像众多，使用前先确认其公开仓库与维护状态。见[资源与参考文献](/appendix/resources.md)、[语音识别与合成](/project/asr-tts)。
 - 官方站域名已迁移：freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch，引用旧链接时注意重定向。见[资源与参考文献](/appendix/resources.md)。

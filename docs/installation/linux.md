@@ -45,7 +45,7 @@ sudo apt-get install -y git build-essential autoconf automake libtool \
 # GitHub 镜像（可直接克隆）
 git clone https://github.com/signalwire/freeswitch.git
 cd freeswitch
-git checkout v1.10.12   # 选择目标版本，以官方 Release 列表为准
+git checkout v1.11.3   # 选择目标版本，以官方 Release 列表为准
 ```
 
 ### 3. 引导与配置

@@ -10,7 +10,7 @@
 | FreeSWITCH Users Manual | <https://developer.signalwire.com/freeswitch/> | SignalWire 维护的官方用户手册，分 12 个部分（Foundations、Configuration System、Call Routing、Media、Integration and Control、Module Reference、Troubleshooting、Programming 等），是当前最权威的文档入口 |
 | 脚本集成章节 | <https://developer.signalwire.com/freeswitch/integration/scripting> | Lua/JS/Python 等脚本模块与 `lua`/`luarun` 两类命令的官方说明 |
 | 嵌入式脚本 API | <https://developer.signalwire.com/freeswitch/programming/scripting-apis> | 各语言脚本可用的对象与方法（session、event 等） |
-| 源码发布包 | <https://files.freeswitch.org/releases/freeswitch/> | 各版本源码压缩包（含 1.10 系列） |
+| 源码发布包 | <https://files.freeswitch.org/releases/freeswitch/> | 各版本源码压缩包（含 1.10 与 1.11 系列，最新稳定 1.11.3） |
 
 旧版 wiki（freeswitch.org/confluence）已迁移至上述 SignalWire 开发者门户，老教程里的 wiki 链接大多可以在新站检索到对应内容。
 
@@ -70,7 +70,7 @@
 | 社区开源书 | 见上站内链接 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》两本社区共创开源书，杜金房及各位贡献者（2016-2023），在线阅读 book.dujinfang.com，仍在写作更新中，案例导向 |
 | 知乎专栏 / 微信公众号 | 见上站内链接 | 中文圈动态与答疑（公众号 FreeSWITCH-CN） |
 
-中文资料检索建议：中文社区内容版本跨度大（1.2 到 1.10 都有），引用配置片段时先确认版本，再用本手册 [附录 A](/appendix/configuration-files) 对照 vanilla 模板核实。
+中文资料检索建议：中文社区内容版本跨度大（1.2 到 1.11 都有），引用配置片段时先确认版本，再用本手册 [附录 A](/appendix/configuration-files) 对照 vanilla 模板核实。1.11 系列存在破坏性变更（mod_python 与约 30 个遗留模块移除、PCRE2 迁移），核对旧教程时注意。
 
 ## 本站导航
 
