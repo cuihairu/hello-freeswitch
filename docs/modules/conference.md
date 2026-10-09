@@ -188,7 +188,7 @@ fs_cli -x "conference 3000 volume_out 3 4"
 | 提示音开关 | `enter_sound on\|off\|none\|file <filename>` / `exit_sound 同` | |
 | 写参数 | `set <max_members\|sound_prefix\|caller_id_name\|caller_id_number\|endconference_grace_time> <value>` | 运行时改参数 |
 
-按键控制之外，成员自己也能用 DTMF 完成常用操作：`0` 闭音切换、`9/8/7` 能量升降、`3/2/1` 自己发言音量、`6/5/4` 收听音量、`#` 挂断（vanilla `default` 按键组），主持人换用 `moderator-controls` 组即可拥有独立键位。
+按键控制之外，成员自己也能用 DTMF 完成常用操作：`0` 闭音切换、`9/7` 能量升降、`3/1` 自己发言音量、`6/4` 收听音量、`#` 挂断（vanilla `default` 按键组），主持人换用 `moderator-controls` 组即可拥有独立键位。
 
 ## 录音与直播旁路
 

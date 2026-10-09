@@ -11,21 +11,24 @@ conf/
 ├── freeswitch.xml          # 根配置：装配其余文件，定义全局 section
 ├── vars.xml                # 全局变量定义（$${...}）
 ├── mime.types              # 内置 HTTP 服务文件类型表
-├── tls/                    # TLS 证书目录（内部/外部 profile 各一套）
 ├── dialplan/               # 拨号计划
 │   ├── default.xml         # default context 主文件
 │   ├── default/            # 被 default.xml <include> 进来的分片（demo 分机等）
-│   ├── features.xml        # 特征码（呼叫转移等功能码）
 │   ├── public.xml          # public context（来自外部的来话）
-│   └── lua/                # Lua 拨号脚本（如有）
+│   ├── public/             # public context 分片
+│   ├── features.xml        # 特征码（呼叫转移等功能码）
+│   ├── skinny-patterns.xml # SCCP 特征模式
+│   └── skinny-patterns/    # SCCP 特征模式分片
 ├── directory/              # 用户目录（SIP 分机账号）
 │   ├── default.xml         # default domain 域定义
 │   └── default/            # 1000.xml, 1001.xml ... 每分机一文件
 ├── sip_profiles/           # SIP profile
 │   ├── internal.xml        # 内部 profile（默认 5060，收分机注册）
-│   ├── internal/           # internal 附加配置分片
+│   ├── internal-ipv6.xml   # 内部 profile 的 IPv6 变体
 │   ├── external.xml        # 外部 profile（默认 5080，对接运营商/网关）
-│   └── external/           # 外部网关定义（gw1.xml ...）
+│   ├── external-ipv6.xml   # 外部 profile 的 IPv6 变体
+│   ├── external/           # 外部网关定义（gw1.xml ...）
+│   └── external-ipv6/      # 外部网关 IPv6 定义
 ├── autoload_configs/       # 各模块的 autoload 配置
 │   ├── modules.conf.xml    # ★ 决定启动时加载哪些模块
 │   ├── acl.conf.xml        # 访问控制列表
@@ -34,10 +37,12 @@ conf/
 │   ├── lua.conf.xml        # Lua 运行时
 │   └── ...
 ├── ivr_menus/              # IVR 菜单定义
-├── jingle_profiles/        # XMPP/Jingle 对接（历史模块）
-├── lang/                   # 多语言提示音短语（Phrase）
-└── tls/                    # TLS 证书与私钥
+├── chatplan/               # 聊天计划（mod_dptools 的 chat 应用）
+├── skinny_profiles/        # SCCP 话机 profile（用 mod_skinny 才需要）
+└── lang/                   # 多语言提示音短语（Phrase）
 ```
+
+模板里另有若干示例与模板文件（`config.FS0`、`extensions.conf`、`fur_elise.ttml`、`tetris.ttml`、`voicemail.tpl`、`web-vm.tpl` 等），只作演示，生产部署可删。vanilla 模板不含 TLS 证书目录：启用 TLS/WSS 时用 `scripts/gentls_cert` 生成自签证书，放到证书目录（默认 `conf/tls`，configure 的 `--with-certsdir` 可改）。
 
 不同安装方式下个别子目录可能缺省，核心的 `freeswitch.xml`、`vars.xml`、`dialplan/`、`directory/`、`sip_profiles/`、`autoload_configs/` 六处始终存在。
 
