@@ -18,8 +18,7 @@ export default defineConfig({
   srcExclude: ['**/SUMMARY.md'],
 
   themeConfig: {
-    // 品牌资产空位：logo.svg 到位后启用
-    // logo: '/logo.svg',
+    logo: '/logo.svg',
     siteTitle: 'Hello FreeSWITCH',
 
     nav: [
