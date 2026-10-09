@@ -113,7 +113,7 @@ conf/
 | `default/*.xml` | 具体规则分片，文件名前缀（如 `00_`、`90_`）决定 include 顺序即匹配优先级；vanilla 自带 demo 分机与特征码示例 |
 | `public.xml` | `public` context：来自外部的来话（external profile 默认进这里），vanilla 只有少量示例，生产按需重写 |
 | `features.xml` | 特征码 context：呼叫转移等功能码 |
-| `lua/` | 自带 Lua 拨号脚本示例（部分模板提供） |
+| `skinny-patterns.xml` | SCCP（mod_skinny）话机的号码模式（用 mod_skinny 才需要） |
 
 关键约定：
 
@@ -180,7 +180,7 @@ conf/
 | `caller-id-in-from` | 是否用主叫号替换 From |
 | `extension` | 来话匹配的号码（对端呼入时落到的分机） |
 | `context` | 该网关来话进入的 context |
-| `cidr` | 网关来源网段 |
+| `gw-auth-acl` | 网关鉴权 ACL，指向 `acl.conf.xml` 的列表名（来源网段限制走这里，网关无 `cidr` 参数） |
 
 ## ivr_menus/ 与 lang/
 
