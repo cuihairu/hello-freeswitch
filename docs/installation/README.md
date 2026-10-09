@@ -35,4 +35,4 @@ FreeSWITCH 的官方主战场是 Linux 服务器。本节介绍支持的平台�
 - [在 Linux 上安装](/installation/linux)：官方仓库与源码编译两条完整路线；
 - [在 Windows 上安装](/installation/windows)：安装包与 WSL2 方案。
 
-安装完成后，进入 [FreeSWITCH 的基本配置](/configuration/)。
+安装完成后，进入 [FreeSWITCH 的基本配置](/configuration/README)。

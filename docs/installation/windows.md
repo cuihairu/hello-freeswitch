@@ -54,6 +54,6 @@ fs_cli.exe -x "show modules"
 
 ## 下一步
 
-- [FreeSWITCH 的基本配置](/configuration/)：配置文件体系；
+- [FreeSWITCH 的基本配置](/configuration/README)：配置文件体系；
 - [配置文件结构](/configuration/config-files)：`conf/` 目录逐项说明；
 - [网络设置](/configuration/network)：端口、防火墙与 NAT。

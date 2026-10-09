@@ -18,8 +18,6 @@ export default defineConfig({
   // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
   srcExclude: ['**/SUMMARY.md'],
 
-  ignoreDeadLinks: true,
-
   themeConfig: {
     // 品牌资产空位：logo.svg 到位后启用
     // logo: '/logo.svg',
@@ -29,7 +27,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '引言', link: '/introduction/history' },
       { text: '安装与配置', link: '/installation/' },
-      { text: '核心概念', link: '/concepts/' }
+      { text: '核心概念', link: '/concepts/session' }
     ],
 
     // 由 mdbook SUMMARY.md 结构映射而来（vitepress-migration/parse_summary.py），

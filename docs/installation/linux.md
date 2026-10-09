@@ -102,4 +102,4 @@ freeswitch@host> bye
 
 ## 下一步
 
-进入 [FreeSWITCH 的基本配置](/configuration/)，了解配置文件体系；若你在 Windows 上体验，转到 [在 Windows 上安装](/installation/windows)。
+进入 [FreeSWITCH 的基本配置](/configuration/README)，了解配置文件体系；若你在 Windows 上体验，转到 [在 Windows 上安装](/installation/windows)。
