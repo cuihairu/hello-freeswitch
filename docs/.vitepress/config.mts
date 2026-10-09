@@ -25,7 +25,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '引言', link: '/introduction/history' },
-      { text: '安装与配置', link: '/installation/' },
+      { text: '安装与配置', link: '/installation/README' },
       { text: '核心概念', link: '/concepts/session' }
     ],
 
