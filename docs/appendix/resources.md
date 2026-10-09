@@ -67,7 +67,7 @@
 | 资源 | 链接 | 说明 |
 | ---- | ---- | ---- |
 | FreeSWITCH 中文社区 | <https://freeswitch.org.cn/> | 非官方中文社区站：博客、入门教程、社区活动与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方） |
-| 社区开源书 | 见上站内链接 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》两本社区维护的开源书，案例导向 |
+| 社区开源书 | 见上站内链接 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》两本社区共创开源书，杜金房及各位贡献者（2016-2023），在线阅读 book.dujinfang.com，仍在写作更新中，案例导向 |
 | 知乎专栏 / 微信公众号 | 见上站内链接 | 中文圈动态与答疑（公众号 FreeSWITCH-CN） |
 
 中文资料检索建议：中文社区内容版本跨度大（1.2 到 1.10 都有），引用配置片段时先确认版本，再用本手册 [附录 A](/appendix/configuration-files) 对照 vanilla 模板核实。

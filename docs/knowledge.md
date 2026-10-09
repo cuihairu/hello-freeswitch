@@ -83,7 +83,7 @@
 
 ## 权威书籍要点
 
-站内引用与推荐的书籍如下，出处均为[资源与参考文献](/appendix/resources.md)。「对应知识点」列是整理时按该书目说明映射到本仓页面，未逐章核对原书。
+站内引用与推荐的书籍如下，出处均为[资源与参考文献](/appendix/resources.md)。「对应知识点」列是整理时按该书目说明映射到本仓页面，未逐章核对原书。两本社区书的作者与出版信息原标「来源未考」，2026-10-10 自 FreeSWITCH 中文社区站书目页实测补齐。
 
 | 书名 | 作者 / 年代 | 对应知识点 | 站内出处 |
 | ---- | ---- | ---- | ---- |
@@ -93,7 +93,7 @@
 | *Mastering FreeSWITCH*（2016, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 进阶主题：集群、安全、性能 | [部署与运维](/project/deployment) |
 | *FreeSWITCH 1.8*（2017, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 较新的一本系统教程 | [核心概念](/concepts/session) |
 | 《FreeSWITCH 权威指南》 | 杜金房等著 | 国内 FreeSWITCH 的标杆图书，从 SIP 基础到 ESL/脚本与生产实践，中文读者的首选系统教材 | [资源与参考文献](/appendix/resources.md) |
-| 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》 | 社区维护（作者与出版信息**来源未考**） | 社区开源书，案例导向 | [资源与参考文献](/appendix/resources.md) |
+| 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》 | 杜金房及各位贡献者（2016-2023，在线共创，仍在写作更新中） | 社区开源书，案例导向，在线阅读（book.dujinfang.com），无正式出版社 | [资源与参考文献](/appendix/resources.md) |
 
 英文书基于的版本偏旧（1.2 到 1.8），配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。中文社区资料版本跨度大（1.2 到 1.10 都有），引用配置片段时先确认版本，再用 vanilla 模板核实。见[资源与参考文献](/appendix/resources.md)。
 
