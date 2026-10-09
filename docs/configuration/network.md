@@ -7,11 +7,11 @@
 | 端口 | 协议 | 用途 |
 | ---- | ---- | ---- |
 | 5060 | UDP/TCP | SIP（internal profile，分机注册与呼叫） |
-| 5061 | TCP/TLS | SIP over TLS（internal，需配证书） |
+| 5061 | TCP/TLS | SIP over TLS（internal，需配证书启用，默认关闭） |
 | 5066 | TCP | SIP over WebSocket（WebRTC） |
 | 7443 | TCP/TLS | SIP over WSS（WebRTC 加密） |
-| 5070 | UDP/TCP | SIP（external profile，对接运营商/网关） |
-| 5080 | UDP/TCP | SIP（external profile TLS） |
+| 5080 | UDP/TCP | SIP（external profile，对接运营商/网关） |
+| 5081 | TCP/TLS | SIP over TLS（external profile，默认关闭） |
 | 8021 | TCP | ESL 事件套接字（**仅限本机管理**） |
 | 16384-32768 | UDP | RTP 媒体端口段 |
 
@@ -33,9 +33,9 @@ sudo ufw status
 
 要点：
 
-- **RTP 端口段必须整段放行**，且与 profile 里的 `rtp-start-port`/`rtp-end-port` 保持一致（源码安装默认 16384-32768，可用 vars.xml 中 `$${rtp_start_port}`/`$${rtp_end_port}` 修改收窄）；
+- **RTP 端口段必须整段放行**，且与 `autoload_configs/switch.conf.xml` 里的 `rtp-start-port`/`rtp-end-port` 保持一致（源码安装默认 16384-32768，这两个参数默认注释、放开即可修改收窄）；
 - 8021（ESL）**永远不要**对公网放行；`fs_cli` 走本机连接即可，远程管理用 SSH 隧道；
-- 对接运营商时按需放行 external profile 的 5070/5080 与对端 IP 白名单。
+- 对接运营商时按需放行 external profile 的 5080（明文）/5081（TLS，默认关）与对端 IP 白名单。
 
 ## NAT：公网部署的关键参数
 

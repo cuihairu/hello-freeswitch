@@ -1,6 +1,6 @@
 # 附录 A · 配置文件详解
 
-本附录按 FreeSWITCH 1.10 的 vanilla 配置模板（源码树 `conf/vanilla/`）逐文件梳理 `conf/` 目录：每个文件干什么、关键参数是什么、改完怎么生效。章节归属与字段细节可对照 [配置文件结构](/configuration/config-files) 与 [核心配置文件](/configuration/core-files) 两章。
+本附录按 FreeSWITCH 1.11.3 的 vanilla 配置模板（源码树 `conf/vanilla/`）逐文件梳理 `conf/` 目录：每个文件干什么、关键参数是什么、改完怎么生效。章节归属与字段细节可对照 [配置文件结构](/configuration/config-files) 与 [核心配置文件](/configuration/core-files) 两章。
 
 ## 目录总览
 
@@ -9,7 +9,6 @@ conf/
 ├── freeswitch.xml        根文件：装配其它文件、声明 section
 ├── vars.xml              全局变量（$${...}）
 ├── mime.types            内置 HTTP 文件类型表
-├── tls/                  TLS 证书与私钥
 ├── autoload_configs/     各模块配置（*.conf.xml）
 ├── sip_profiles/         SIP profile 与网关
 ├── dialplan/             拨号计划
@@ -19,6 +18,8 @@ conf/
 ├── chatplan/             聊天（消息）路由计划
 └── skinny_profiles/      SCCP 话机 profile（用 mod_skinny 才需要）
 ```
+
+模板里另有若干示例与模板文件（`config.FS0`、`extensions.conf`、`fur_elise.ttml`、`tetris.ttml`、`voicemail.tpl`、`web-vm.tpl` 等），只作演示，生产部署可删。vanilla 模板不含 TLS 证书目录：启用 TLS/WSS 时用 `scripts/gentls_cert` 生成自签证书，放到证书目录（默认 `conf/tls`，configure 的 `--with-certsdir` 可改）。
 
 ## freeswitch.xml
 
@@ -46,11 +47,10 @@ conf/
 | `sound_prefix` | `$${sounds_dir}/en/us/callie` | 提示音前缀，中文部署指向自备目录 |
 | `hold_music` | `local_stream://moh` | 等待音乐 |
 | `global_codec_prefs` / `outbound_codec_prefs` | `OPUS,G722,PCMU,PCMA,H264,VP8` | 编码优先级 |
-| `internal_sip_port` / `external_sip_port` | `5060` / `5070` | SIP 端口 |
-| `internal_tls_port` | `5061` | SIP TLS 端口 |
+| `internal_sip_port` / `external_sip_port` | `5060` / `5080` | SIP 端口（internal / external profile） |
+| `internal_tls_port` / `external_tls_port` | `5061` / `5081` | SIP TLS 端口（`internal_ssl_enable` / `external_ssl_enable` 默认 false，即默认不监听） |
 | `external_rtp_ip` / `external_sip_ip` | `stun:stun.freeswitch.org` | NAT 对外宣告地址，公网部署改为公网 IP |
-| `rtp_start_port` / `rtp_end_port` | `16384` / `32768` | RTP 端口段 |
-| `recordings_dir` | `$${base_dir}/recordings` | 录音目录 |
+| `recordings_dir` | `$${base_dir}/recordings` | 录音目录（编译期默认值，vars.xml 中仅有说明注释） |
 | `script_dir` | `$${base_dir}/scripts` | 脚本目录 |
 | `console_loglevel` | `info` | 控制台日志级别 |
 | `us-ring`、`cn-ring` 等 | 回铃音定义 | 各国振铃节奏 |
@@ -95,6 +95,7 @@ conf/
 | `loglevel` | `debug` | 全局日志级别 |
 | `core-db-dsn` | （注释） | core db 外移到 ODBC/PostgreSQL 的 DSN，多节点共享时配置 |
 | `max-db-handles` / `db-handle-timeout` | `50` / `10` | 数据库连接池 |
+| `rtp-start-port` / `rtp-end-port` | `16384` / `32768`（默认注释） | RTP 媒体端口段，防火墙需整段放行 |
 | `switchname` | （注释） | HA 集群环境覆盖主机名，使多节点可用同一套配置 |
 | `dialplan-timestamps` | `false` | 拨号计划日志加时间戳 |
 | `min-dtmf-duration` / `max-dtmf-duration` / `default-dtmf-duration` | `400` / `192000` / `2000`（毫秒） | DTMF 时长约束 |
@@ -135,7 +136,7 @@ conf/
 | ---- | ---- |
 | `internal.xml` | 内部 profile：默认 5060，收分机注册与呼叫 |
 | `internal/*.xml` | internal 的附加配置分片 |
-| `external.xml` | 外部 profile：默认 5070，对接运营商/网关 |
+| `external.xml` | 外部 profile：默认 5080，对接运营商/网关 |
 | `external/gw1.xml` 等 | SIP 网关定义（对接运营商） |
 | `internal.xml` 里的 `<gateways>` | 也可直接在 profile 内写网关 |
 
@@ -184,7 +185,7 @@ conf/
 ## ivr_menus/ 与 lang/
 
 - `ivr_menus/*.xml`：内置 IVR 菜单定义（`<menu name=... greeting=... timeout=...>` 与 `<entry action="menu-sub|menu-exec-app|menu-play-sound" digits="1" .../>`），配合 `autoload_configs/ivr.conf.xml` 加载，`ivr <菜单名>` application 调用；
-- `lang/`：按语言组织的短语（Phrase）宏与提示音索引，`playback phrase:` 时使用；中文部署可仿照 `en/us` 结构自建 `zh/cn`。
+- `lang/`：按语言组织的短语（Phrase）宏与提示音索引，`playback phrase:` 时使用；vanilla 自带 de/en/es/fr/he/pt/ru/sv 八种，中文部署可仿照 `lang/en/`（内含 `demo/`、`dir/`、`ivr/`、`vm/` 与 `en.xml`）自建 `lang/zh/`。
 
 ## 改什么、怎么生效
 

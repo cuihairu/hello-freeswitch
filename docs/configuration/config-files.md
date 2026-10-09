@@ -24,7 +24,7 @@ conf/
 ├── sip_profiles/           # SIP profile
 │   ├── internal.xml        # 内部 profile（默认 5060，收分机注册）
 │   ├── internal/           # internal 附加配置分片
-│   ├── external.xml        # 外部 profile（默认 5070，对接运营商/网关）
+│   ├── external.xml        # 外部 profile（默认 5080，对接运营商/网关）
 │   └── external/           # 外部网关定义（gw1.xml ...）
 ├── autoload_configs/       # 各模块的 autoload 配置
 │   ├── modules.conf.xml    # ★ 决定启动时加载哪些模块

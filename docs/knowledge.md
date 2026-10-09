@@ -37,7 +37,7 @@
 ### SIP 与 mod_sofia：profile、注册认证与防扫描
 
 - SIP 只负责「找人和接通」，语音内容不走 SIP，媒体走 RTP。一次呼叫的标准事务是 INVITE → 100 Trying → 180 Ringing → 200 OK → ACK → BYE。见[SIP 模块](/modules/sip)。
-- mod_sofia 以 profile 为单位监听网络，vanilla 默认两个：internal（5060，收分机注册与内呼）与 external（5070，对接运营商/网关）。见[SIP 模块](/modules/sip)。
+- mod_sofia 以 profile 为单位监听网络，vanilla 默认两个：internal（5060，收分机注册与内呼）与 external（5080，对接运营商/网关）。见[SIP 模块](/modules/sip)。
 - 注册走标准 HTTP Digest：分机发 REGISTER，FreeSWITCH 回 401 带随机数 nonce，分机算摘要重发，校验通过回 200 OK。nonce 有有效期（`nonce-ttl` 默认 60 秒），过期重新挑战，防止重放。见[SIP 模块](/modules/sip)。
 - 认证链路按序处理：ACL 准入（不通过直接拒收）→ 注册认证（REGISTER 一律走 401 Digest，除非命中 ACL 免认证）→ 来话认证（`auth-calls=true` 时 INVITE 同样要求 Digest）。见[SIP 模块](/modules/sip)。
 - 5060 暴露公网会被扫描器持续尝试注册，上线前逐条核对防扫描清单：改默认密码、收紧 ACL、保留失败日志、限速、不碰 `accept-blind-reg` / `accept-blind-auth`、防火墙兜底。见[SIP 模块](/modules/sip)。
