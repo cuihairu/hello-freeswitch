@@ -54,7 +54,7 @@ export default defineConfig({
     ],
 
     // 由 mdbook SUMMARY.md 结构映射而来（vitepress-migration/parse_summary.py），
-    // 3 个部分 + 未入目录散页归入「附录 · 未入目录」
+    // 现有 7 个分组：引言 / 安装与配置 / 核心概念 / 模块详解 / 进阶应用 / 实战项目 / 附录
     sidebar: sidebar as never,
 
     socialLinks: [
