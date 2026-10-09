@@ -38,6 +38,7 @@ export default defineConfig({
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
+      ['meta', { name: 'twitter:card', content: 'summary' }]
     ]
   },
 
@@ -59,6 +60,11 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/cuihairu/hello-freeswitch' }
     ],
+
+    editLink: {
+      pattern: 'https://github.com/cuihairu/hello-freeswitch/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页'
+    },
 
     footer: {
       message: 'Hello FreeSWITCH',
