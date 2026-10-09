@@ -21,6 +21,10 @@ FreeSWITCH 知识手册 · [在线阅读](https://cuihairu.github.io/hello-frees
 
 从安装配置、核心概念与拨号计划，到模块详解、脚本与 ESL，再到智能客服项目实战的 FreeSWITCH 中文知识站点。
 
+## 知识地图
+
+[知识点总纲](https://cuihairu.github.io/hello-freeswitch/knowledge)把全站收拢成一页：核心概念、依据的书籍与官方文档、应用场景、常见坑，每条注明来源并链接回原文。
+
 ## 本地开发
 
 ```bash

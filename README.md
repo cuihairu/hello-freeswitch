@@ -21,6 +21,10 @@ FreeSWITCH Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-
 
 A Chinese-language FreeSWITCH knowledge site covering installation and configuration, core concepts and the dial plan, module deep dives, scripts and ESL, and hands-on projects including an intelligent customer-service bot.
 
+## Knowledge Map
+
+The [knowledge map](https://cuihairu.github.io/hello-freeswitch/knowledge) consolidates the whole site into one page: core concepts, the books and official docs behind it, application scenarios, and common pitfalls, each entry linked back to its source page.
+
 ## Local Development
 
 ```bash
