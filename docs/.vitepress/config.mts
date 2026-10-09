@@ -11,8 +11,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    // 品牌资产空位：favicon.svg 到位后启用
-    // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-freeswitch/favicon.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-freeswitch/favicon.svg' }]
   ],
 
   // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
