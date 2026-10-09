@@ -40,7 +40,7 @@ mod_sofia 原生支持 SIP over WebSocket（`ws-binding` 5066、`wss-binding` 74
 ## 语音通知与批量外呼
 
 - 结合脚本或 ESL 循环 `originate`，向用户批量推送欠费提醒、订单通知；
-- 配合 TTS（mod_flite、mod_tts_stop 或对接云端 TTS）把文本转语音播出；
+- 配合 TTS（mod_flite、mod_tts_commandline 或对接云端 TTS）把文本转语音播出；
 - 通过限速、并发控制避免被运营商封禁。
 
 ## 智能客服与 AI 通信

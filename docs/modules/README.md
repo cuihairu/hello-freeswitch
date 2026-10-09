@@ -105,9 +105,9 @@ FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状
 ### 编解码模块
 
 - **音频**：`mod_opus`（Opus）、`mod_spandsp`（G.711/G.722/GSM/G.726 及传真、DTMF 等 DSP）、`mod_g729`、`mod_g723_1`、`mod_ilbc`、`mod_silk`、`mod_amr`、`mod_codec2`；
-- **视频**：`mod_openh264`（H.264 编解码）、`mod_h26x`（H.264/H.263 系列 RTP 封装透传）、`mod_yuv`；
+- **视频**：`mod_openh264`（H.264 编解码）、`mod_h26x`（H.264/H.263 系列 RTP 封装透传，1.11.0 起已移除）、`mod_yuv`；
 - **无需模块**：PCMU/PCMA（G.711）与 L16 直接实现在核心中，VP8/VP9 视频同样由核心提供；
-- **带授权要求的扩展**：`mod_com_g729`、`mod_sangoma_codec` 等，默认不加载。
+- **带授权要求的扩展**：`mod_com_g729`、`mod_sangoma_codec` 等，默认不加载（`mod_sangoma_codec` 不随主源码树发布，需单独获取）。
 
 ### 网关与端点模块
 

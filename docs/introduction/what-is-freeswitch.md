@@ -13,7 +13,7 @@ FreeSWITCH 的本质是三层能力的组合：
 ## 主要特性
 
 - **模块化架构**：几乎所有功能都以动态模块（`.so`/`.dll`）形式加载，可在 `modules.conf.xml` 中按需开关，核心本体保持精简。
-- **多协议与多形态**：支持 SIP over UDP/TCP/TLS，支持 WebRTC（SIP over WebSocket，端口 5066/7443），支持 TDM/模拟/数字中继（通过 mod_freetdm、mod_openzap 等）。
+- **多协议与多形态**：支持 SIP over UDP/TCP/TLS，支持 WebRTC（SIP over WebSocket，端口 5066/7443），支持 TDM/模拟/数字中继（通过 TDM 类模块，如 mod_freetdm；这类模块需单独获取，不随主源码树发布）。
 - **跨平台**：官方支持 Linux（主要目标平台）、FreeBSD、macOS 与 Windows。
 - **高并发**：单机可承载数千路并发通话，信令与媒体处理可分布在多台服务器上水平扩展。
 - **脚本与控制接口**：Lua、JavaScript 脚本可直接嵌入拨号计划；ESL（Event Socket Library）允许 Python、Go、Node.js 等任意语言通过 TCP 控制 FreeSWITCH。

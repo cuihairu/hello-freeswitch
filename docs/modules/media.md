@@ -13,7 +13,7 @@
 | `mod_spandsp` | G.711、G.722、GSM、G.726、ADPCM、LPC-10 | 同时提供传真（T.38/传真网关）与 DTMF 检测等 DSP 应用 |
 | `mod_opus` | OPUS | 参数模板在 `autoload_configs/opus.conf.xml` |
 | `mod_openh264` | H.264 | H.264 编解码实现 |
-| `mod_h26x` | H.264、H.263、H.263-1998、H.263-2000、H.261 | 仅 RTP 封装透传，不解码 |
+| `mod_h26x` | H.264、H.263、H.263-1998、H.263-2000、H.261 | 仅 RTP 封装透传，不解码（**1.11.0 起已移除**） |
 | `mod_av` | H.263/H.264 转码、mp4/mkv 容器 | 基于 ffmpeg（libavformat/libavcodec） |
 | `mod_yuv` | 原始 YUV | 视频测试与开发 |
 
@@ -108,10 +108,10 @@ fs_cli -x "conference 3000 file-vol 4"       # 录音/播放文件音量
 
 ### 播放侧的滤波与变速
 
-- `mod_ladspa`：加载 LADSPA 插件做滤波/降噪/降噪门等处理，application 是 `ladspa_run`（vanilla 自带示例拨号 `dialplan/default/00_ladspa.xml`），例如 `ladspa_run r|tap_chorusflanger||`；
+- `mod_ladspa`：加载 LADSPA 插件做滤波/降噪等处理，application 是 `ladspa_run`（如 `ladspa_run r|tap_chorusflanger||`）；
 - `mod_soundtouch`：application `soundtouch`，调整音频流的 pitch/rate/tempo（变声、变速播放）。
 
-这两类处理基于 media bug 在通道上实时生效，通常放在 `answer` 之后、`bridge`/`playback` 之前。
+这两个模块在 FreeSWITCH 1.11.0 起已从源码树移除，1.10 及更早版本可用；1.11 上需要滤波或变速时，改用会议内命令（`volume_in`/`volume_out` 等）或把媒体外送到专门的音频处理服务。这类处理基于 media bug 在通道上实时生效，通常放在 `answer` 之后、`bridge`/`playback` 之前。
 
 ### mod_spandsp 的真实角色
 
@@ -121,9 +121,9 @@ fs_cli -x "conference 3000 file-vol 4"       # 录音/播放文件音量
 
 | 编解码 | 提供方 | 用法要点 |
 | ---- | ---- | ---- |
-| H.264 | `mod_openh264`（编解码）、`mod_h26x`（透传） | 终端互通性最好；透传要求两侧直接兼容 |
+| H.264 | `mod_openh264`（编解码）、`mod_h26x`（透传，1.11.0 起已移除） | 终端互通性最好；透传要求两侧直接兼容 |
 | VP8 / VP9 | 核心（`vpx.conf.xml` 调参） | WebRTC 默认；会议混屏常用 |
-| H.263/H.261 | `mod_h26x` 透传 | 老视频终端 |
+| H.263/H.261 | `mod_h26x` 透传（1.11.0 起已移除） | 老视频终端 |
 
 视频偏好同样写在 `inbound-codec-prefs`/`outbound-codec-prefs` 里（vanilla 默认含 `H264,VP8`），协商规则与音频一致。会议视频混屏（mux 模式）是转码重负载场景：画布尺寸、帧率、码率直接决定 CPU 用量，见下文。
 

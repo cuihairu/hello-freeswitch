@@ -66,7 +66,7 @@ uuid_audio_stream <uuid> stop <metadata>
 | 模块 | 作用 | 说明 |
 | ---- | ---- | ---- |
 | `mod_pocketsphinx` | 离线 ASR | CMU Sphinx 引擎，随源码树提供；**只适合英文与简单语法识别**，中文生产不可用；典型用法是 `play_and_detect_speech` 播提示音同时识别，结果写入通道变量 `detect_speech_result` |
-| `mod_unimrcp` | MRCP 客户端 | 通过 MRCP v1/v2 协议对接支持 MRCP 的 ASR/TTS 服务（不少商用语音一体机都提供 MRCP 接入）；配置文件不在 vanilla 模板中，需按模块文档放置 `unimrcp.conf.xml` 与 MRCP profile 后加载模块，配合 `detect:unimrcp` 与 `speak` 使用 |
+| `mod_unimrcp` | MRCP 客户端 | 通过 MRCP v1/v2 协议对接支持 MRCP 的 ASR/TTS 服务（不少商用语音一体机都提供 MRCP 接入）；模块不随 FreeSWITCH 主源码树发布，需从 UniMRCP 项目获取；配置文件也不在 vanilla 模板中，需按模块文档放置 `unimrcp.conf.xml` 与 MRCP profile 后加载模块，配合 `detect:unimrcp` 与 `speak` 使用 |
 | `mod_tts_commandline` | 命令行 TTS | 调一个外部命令把文本合成为 wav 再播放，配置只有一条 `command`，可用变量 `${text}` `${voice}` `${rate}` `${file}`，例如默认的 `echo ${text} \| text2wave -f ${rate} > ${file}`；是把任意"能跑命令的合成器"接进来的最小通路 |
 | `mod_flite` | 内置 TTS | 英文合成引擎，验证 `speak` 通路时有用 |
 

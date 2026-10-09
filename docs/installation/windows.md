@@ -27,7 +27,7 @@ fs_cli.exe -x "status"
 ### 已知限制
 
 - 官方 Windows 构建的版本发布滞后，模块覆盖不全（TDM、部分编解码模块仅 Linux 可用）；
-- 音频设备采集/播放依赖 mod_portaudio，行为与 Linux ALSA/PulseAudio 不同；
+- 音频设备采集/播放依赖 mod_portaudio（1.10 及更早），行为与 Linux ALSA/PulseAudio 不同；该模块在 1.11.0 起已从源码树移除；
 - 生产级 NAT 穿透、性能调优在 Windows 上缺乏官方实践背书。
 
 ## 方案二：WSL2（推荐）
