@@ -66,7 +66,7 @@
 
 | 资源 | 链接 | 说明 |
 | ---- | ---- | ---- |
-| FreeSWITCH 中文社区 | <https://freeswitch.org.cn/> | 非官方中文社区站（官方站为 freeswitch.com）：博客、入门教程、社区活动与版本动态 |
+| FreeSWITCH 中文社区 | <https://freeswitch.org.cn/> | 非官方中文社区站：博客、入门教程、社区活动与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方） |
 | 社区开源书 | 见上站内链接 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》两本社区维护的开源书，案例导向 |
 | 知乎专栏 / 微信公众号 | 见上站内链接 | 中文圈动态与答疑（公众号 FreeSWITCH-CN） |
 

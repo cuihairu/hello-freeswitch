@@ -101,7 +101,7 @@
 
 以下链接全部出自[资源与参考文献](/appendix/resources.md)的登记，旧版 wiki（freeswitch.org/confluence）已迁移至 SignalWire 开发者门户。
 
-- [FreeSWITCH 官网](https://freeswitch.org/)：项目主站，新闻、下载入口、社区链接。
+- [FreeSWITCH 官网](https://freeswitch.org/)：项目主站，新闻、下载入口、社区链接（现 301 至 signalwire.com/freeswitch）。
 - [SignalWire 官方用户手册](https://developer.signalwire.com/freeswitch/)：分 12 个部分（Foundations、Configuration System、Call Routing、Media、Integration and Control、Module Reference、Troubleshooting、Programming 等），是当前最权威的文档入口。
 - [脚本集成章节](https://developer.signalwire.com/freeswitch/integration/scripting)：Lua/JS/Python 等脚本模块与 `lua` / `luarun` 两类命令的官方说明。
 - [嵌入式脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)：各语言脚本可用的对象与方法（session、event 等）。
@@ -110,7 +110,7 @@
 - [邮件列表](https://lists.freeswitch.org/)：freeswitch-users、freeswitch-dev 等，历史归档可全文检索，很多疑难杂症的答案都在旧帖里。
 - [ClueCon](https://www.cluecon.com/)：FreeSWITCH 创始团队创办的开发者大会，每年发布路线图与实战分享，演讲材料公开。
 - 与实战篇直接相关的第三方仓库：[drachtio-freeswitch-modules](https://github.com/mdslaney/drachtio-freeswitch-modules)（`mod_audio_fork`，语音 AI 集成的参考实现）、[mod_audio_stream](https://github.com/amigniter/mod_audio_stream)（WebSocket 双向音频流）、[Vosk](https://github.com/alphacep/vosk-api)（可自托管的开源离线 ASR，含中文模型）、[UniMRCP](https://www.unimrcp.org/)（开源 MRCP 框架，`mod_unimrcp` 的底层依赖）、[SIPp](https://github.com/SIPp/sipp)（SIP 协议级压测工具）。
-- [FreeSWITCH 中文社区](https://freeswitch.org.cn/)：非官方中文社区站，博客、入门教程与版本动态。注意 resources.md 该行写「官方站为 freeswitch.com」，与主站 freeswitch.org 矛盾，以 org 为准。
+- [FreeSWITCH 中文社区](https://freeswitch.org.cn/)：非官方中文社区站，博客、入门教程与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方）。
 
 ## 应用场景
 
@@ -181,4 +181,4 @@ NLP 的三项基础能力是意图识别、实体抽取、对话管理，见[自
 - 英文书基于 1.2 到 1.8，配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。见[资源与参考文献](/appendix/resources.md)。
 - 中文社区内容版本跨度大（1.2 到 1.10 都有），引用配置片段时先确认版本，再用 vanilla 模板核实。见[资源与参考文献](/appendix/resources.md)。
 - 社区音频流模块（`mod_audio_stream`、`mod_audio_fork`）不在官方源码树与发行包里，需自行编译；这类仓库更迭频繁、镜像众多，使用前先确认其公开仓库与维护状态。见[资源与参考文献](/appendix/resources.md)、[语音识别与合成](/project/asr-tts)。
-- resources.md 中文社区一行写「官方站为 freeswitch.com」，与主站 freeswitch.org 矛盾，以 org 为准。见[资源与参考文献](/appendix/resources.md)。
+- 官方站域名已迁移：freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch，引用旧链接时注意重定向。见[资源与参考文献](/appendix/resources.md)。
