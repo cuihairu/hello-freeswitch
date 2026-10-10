@@ -88,12 +88,12 @@
 
 ```xml
 <profile name="internal">
-  <param name="context" value="default"/>
+  <param name="context" value="public"/>
   <param name="sip-port" value="$${internal_sip_port}"/>   <!-- 默认 5060 -->
   <param name="dialplan" value="XML"/>
-  <param name="dtmf-mode" value="rfc2833"/>
-  <param name="local-network-acl" value="localnets.auto"/>
-  <param name="apply-inbound-acl" value="localnets.auto"/>
+  <param name="dtmf-type" value="rfc2833"/>
+  <param name="local-network-acl" value="localnet.auto"/>
+  <param name="apply-inbound-acl" value="domains"/>
   <param name="ws-binding" value=":5066"/>                 <!-- WebRTC WebSocket -->
   <param name="wss-binding" value=":7443"/>                <!-- WebRTC over TLS -->
 </profile>

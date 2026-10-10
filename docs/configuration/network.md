@@ -55,7 +55,7 @@ sudo ufw status
 
 ## ACL：谁可以连进来
 
-`autoload_configs/acl.conf.xml` 定义访问控制列表，profile 用 `apply-inbound-acl` 挂接。默认的 `localnets.auto` 只放行本机所在网段：
+`autoload_configs/acl.conf.xml` 定义访问控制列表，profile 用 `apply-inbound-acl` 挂接。内置的 `localnet.auto` 只放行本机所在网段：
 
 ```xml
 <list name="workphones" default="deny">

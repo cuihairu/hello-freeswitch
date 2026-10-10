@@ -16,7 +16,7 @@ FreeSWITCH 的本质是三层能力的组合：
 - **多协议与多形态**：支持 SIP over UDP/TCP/TLS，支持 WebRTC（SIP over WebSocket，端口 5066/7443），支持 TDM/模拟/数字中继（通过 TDM 类模块，如 mod_freetdm；这类模块需单独获取，不随主源码树发布）。
 - **跨平台**：官方支持 Linux（主要目标平台）、FreeBSD、macOS 与 Windows。
 - **高并发**：单机可承载数千路并发通话，信令与媒体处理可分布在多台服务器上水平扩展。
-- **脚本与控制接口**：Lua、JavaScript 脚本可直接嵌入拨号计划；ESL（Event Socket Library）允许 Python、Go、Node.js 等任意语言通过 TCP 控制 FreeSWITCH。
+- **脚本与控制接口**：Lua 脚本可直接嵌入拨号计划（早期版本的 JavaScript 支持 mod_spidermonkey 自 1.4 起已移出源码树，见[脚本与编程接口](/advanced/scripting)）；ESL（Event Socket Library）允许 Python、Go、Node.js 等任意语言通过 TCP 控制 FreeSWITCH。
 - **开源许可**：采用 MPL 1.1（Mozilla Public License 1.1）开源。
 
 ## 与 Asterisk 的简要对比
