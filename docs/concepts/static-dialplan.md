@@ -66,7 +66,7 @@ conf/dialplan/
 ```xml
 <extension name="office_hours">
   <condition field="destination_number" expression="^2000$"/>
-  <condition field="${time(open)}" expression="^(09|10|11|13|14|15|16|17)$">
+  <condition field="${strftime(%H)}" expression="^(09|10|11|13|14|15|16|17)$">
     <action application="transfer" data="2000_realtime XML default"/>
   </condition>
   <anti-action application="bridge" data="user/2000"/>

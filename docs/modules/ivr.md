@@ -21,7 +21,7 @@ FreeSWITCH 的拨号计划本身就是分支引擎，IVR 只是「按键驱动�
 ```xml
 <configuration name="ivr.conf" description="IVR menus">
   <menus>
-    <X-PRE-PROCESS cmd="include" data="../ivr_menus/*.xml"/>
+    <X-PRE-PROCESS cmd="include" data="ivr_menus/*.xml"/>
   </menus>
 </configuration>
 ```
@@ -162,11 +162,11 @@ FreeSWITCH 的拨号计划本身就是分支引擎，IVR 只是「按键驱动�
 ```lua
 -- conf/scripts/ivr_survey.lua
 -- 参数：min, max, tries, timeout_ms, terminators,
---       提示音, 无效提示音, 正则, 结果变量名, 位间超时, 失败转接目标
+--       提示音, 无效提示音, 结果变量名, 正则, 位间超时, 失败转接目标
 local digits = session:playAndGetDigits(1, 4, 3, 8000, "#",
     "phrase:company_main_greeting",
     "ivr/ivr-that_was_an_invalid_entry.wav",
-    "\\d+", "choice", 5000, "")
+    "choice", "\\d+", 5000, "")
 
 if digits == "1" then
   session:transfer("1000", "XML", "default")

@@ -45,7 +45,7 @@ mod_xml_curl 在每次需要拨号计划时，把查询参数 POST 到你的 HTT
 ### 启用
 
 ```xml
-<!-- autoload_modules/xml_curl.conf.xml -->
+<!-- autoload_configs/xml_curl.conf.xml -->
 <configuration name="xml_curl.conf" description="cURL XML Gateway">
   <bindings>
     <binding name="dialplan">

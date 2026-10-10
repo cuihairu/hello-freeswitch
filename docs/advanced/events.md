@@ -149,7 +149,7 @@ Reply-Text: +OK event listener enabled plain
 
 ### myevents 与 filter
 
-- `myevents <uuid> [plain|json|xml]`：只订阅与某个 uuid 相关的通道事件，适合盯着一通电话处理（outbound 模式下常用）；
+- `myevents [plain|json|xml] <uuid>`：只订阅与某个 uuid 相关的通道事件，适合盯着一通电话处理（outbound 模式下常用）；
 - `filter <头名> <值>`：在事件订阅之上再加一级头部过滤，如 `filter Unique-ID 5f2a-...`，取消用 `filter delete <头名> <值>`。
 
 ## bgapi 与 BACKGROUND_JOB
