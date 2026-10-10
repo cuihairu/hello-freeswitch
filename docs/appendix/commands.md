@@ -148,7 +148,7 @@ sngrep -I /tmp/sip.pcap              # 离线分析 pcap
 # 抓 SIP 信令（保存完整包，sngo/Wireshark 离线分析）
 sudo tcpdump -ni any -s 0 udp port 5060 -w /tmp/sip.pcap
 # 快速确认 RTP 是否双向流动
-sudo tcpdump -ni any udp portrange 16384-32768 -c 100
+sudo tcpdump -ni any udp portrange 16384-32766 -c 100
 # 只看某个终端的流量
 sudo tcpdump -ni eth0 host 192.168.1.50 and port 5060
 # 读取已有 pcap

@@ -13,7 +13,7 @@
 | 5080 | UDP/TCP | SIP（external profile，对接运营商/网关） |
 | 5081 | TCP/TLS | SIP over TLS（external profile，默认关闭） |
 | 8021 | TCP | ESL 事件套接字（**仅限本机管理**） |
-| 16384-32768 | UDP | RTP 媒体端口段 |
+| 16384-32766 | UDP | RTP 媒体端口段 |
 
 端口在两处定义：`vars.xml` 里的 `$${internal_sip_port}` 等变量，以及各 profile（`sip_profiles/internal.xml` 的 `sip-port`、`ws-binding` 等）。
 
@@ -27,13 +27,13 @@ sudo ufw allow 5060/tcp
 sudo ufw allow 5061/tcp
 sudo ufw allow 5066/tcp     # 用 WebRTC 才放
 sudo ufw allow 7443/tcp     # 用 WebRTC 才放
-sudo ufw allow 16384:32768/udp
+sudo ufw allow 16384:32766/udp
 sudo ufw status
 ```
 
 要点：
 
-- **RTP 端口段必须整段放行**，且与 `autoload_configs/switch.conf.xml` 里的 `rtp-start-port`/`rtp-end-port` 保持一致（源码安装默认 16384-32768，这两个参数默认注释、放开即可修改收窄）；
+- **RTP 端口段必须整段放行**，且与 `autoload_configs/switch.conf.xml` 里的 `rtp-start-port`/`rtp-end-port` 保持一致（源码安装默认 16384-32766，这两个参数默认注释、放开即可修改收窄）；
 - 8021（ESL）**永远不要**对公网放行；`fs_cli` 走本机连接即可，远程管理用 SSH 隧道；
 - 对接运营商时按需放行 external profile 的 5080（明文）/5081（TLS，默认关）与对端 IP 白名单。
 
@@ -83,7 +83,7 @@ fs_cli -x "sofia status profile internal"
 #   RTP-Start-Port / RTP-End-Port: 与防火墙一致
 ```
 
-打一通测试电话后用 `fs_cli -x "show channels"` 观察，再在服务器上 `tcpdump -ni any udp portrange 16384-32768` 确认 RTP 流量真实进出。
+打一通测试电话后用 `fs_cli -x "show channels"` 观察，再在服务器上 `tcpdump -ni any udp portrange 16384-32766` 确认 RTP 流量真实进出。
 
 ## 下一步
 

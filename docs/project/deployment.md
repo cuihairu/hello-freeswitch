@@ -84,7 +84,7 @@ FreeSWITCH 暴露在网络上会被持续扫描，以下每条都是真实事故
 1. **改掉分机默认密码**。`conf/vars.xml` 里 `default_password=1234`，分机文件里的 `password` 也是 `1234`——公网机器上几分钟就会被注册成功并盗打外线。改为强随机密码，并给每台话机单独密码；
 2. **改掉 ESL 密码并收紧监听**。`autoload_configs/event_socket.conf.xml` 中 `password` 默认 `ClueCon`；内网部署可把 `listen-ip` 固定为 `127.0.0.1`，远程管理走 SSH 隧道；确需远程连接则配置 `apply-inbound-acl` 白名单；
 3. **配置 ACL**。`autoload_configs/acl.conf.xml` 定义可信网段，profile 的 `apply-inbound-acl` / `apply-register-acl` 挂接，`fs_cli -x "reloadacl"` 生效（详见 [网络设置](/configuration/network)）；
-4. **防火墙最小化放行**。只放行业务需要的端口：5060/UDP+TCP、RTP 端口段（默认 16384-32768/UDP）；8021 永远不对公网放行；
+4. **防火墙最小化放行**。只放行业务需要的端口：5060/UDP+TCP、RTP 端口段（默认 16384-32766/UDP）；8021 永远不对公网放行；
 5. **清理演示配置**。vanilla 模板里的演示分机（1000-1019）、`public` context 示例路由按需删除或收紧，`modules.conf.xml` 注释掉用不到的模块；
 6. **按需启用 TLS/SRTP**。`internal` profile 的 `tls`、`wss-binding`（WebRTC）相关参数，配合 `conf/tls/` 下的证书；
 7. **配套防爆破**。用 fail2ban 之类工具盯注册失败日志，或在 `internal` profile 上开启 `log-auth-failures` 便于采集；
@@ -262,7 +262,7 @@ CDR 与录音同样要轮转归档：CSV/录音按天打包上传对象存储后
 **现象**：能接通，但只有一方有声音，或双方都没声。
 
 1. 判定方向：主叫听不到被叫还是反过来，让两端各说一句话确认；
-2. 服务器上抓 RTP：`tcpdump -ni any udp portrange 16384-32768 -c 100`，看两个方向是否都有流量进出来往；
+2. 服务器上抓 RTP：`tcpdump -ni any udp portrange 16384-32766 -c 100`，看两个方向是否都有流量进出来往；
 3. 只有一个方向有流 → 典型 NAT/防火墙问题：检查 `sofia status profile internal` 的 `Ext-RTP-IP`，确认云安全组放行了 RTP 端口段，终端侧检查其 NAT 设置；
 4. 完全没有 RTP → SDP 协商失败或编码不支持：`show codecs` 确认双方共同编码，检查 profile 的 `inbound-codec-prefs`；WebRTC 与普通 SIP 互通还需确认 DTLS/SRTP 相关配置；
 5. 排查期间可用 `uuid_dump <uuid>` 看通道上 `read_codec`/`write_codec`、`remote_media_ip`/`remote_media_port` 是否合理。

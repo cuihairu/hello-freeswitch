@@ -22,7 +22,7 @@ fs_cli.exe -x "version"
 fs_cli.exe -x "status"
 ```
 
-5. 首次运行若被 Windows 防火墙拦截，选择"允许专用网络访问"——FreeSWITCH 需要放行 **5060/udp、5060/tcp（SIP）** 与 **RTP 端口段 16384-32768/udp（媒体）**，详见 [网络设置](/configuration/network)。
+5. 首次运行若被 Windows 防火墙拦截，选择"允许专用网络访问"——FreeSWITCH 需要放行 **5060/udp、5060/tcp（SIP）** 与 **RTP 端口段 16384-32766/udp（媒体）**，详见 [网络设置](/configuration/network)。
 
 ### 已知限制
 

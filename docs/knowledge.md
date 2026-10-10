@@ -78,7 +78,7 @@
 ### 电话到网络电话简史
 
 - 1876 年贝尔发明电话，1889 年斯特罗格发明自动电话交换机，开始取代人工接线员。见[电话的发展史](/introduction/history)。
-- 1995 年 VocalTec 推出全球首个商用互联网电话软件 Internet Phone，VoIP 诞生；2003 年 Skype 推出，2005 年 eBay 以 26 亿美元收购；2008 年谷歌推出 Google Voice。见[电话的发展史](/introduction/history)。
+- 1995 年 VocalTec 推出全球首个商用互联网电话软件 Internet Phone，VoIP 诞生；2003 年 Skype 推出，2005 年 eBay 以 26 亿美元收购；2009 年谷歌推出 Google Voice（前身为 2006 年的 GrandCentral）。见[电话的发展史](/introduction/history)。
 - 2007 年 iPhone 发布开启智能手机时代，WhatsApp、Viber、WeChat 等移动互联网电话应用普及；2010 年代 UCaaS（Zoom、Microsoft Teams）成为现代企业通信的核心工具。见[电话的发展史](/introduction/history)。
 
 ## 权威书籍要点

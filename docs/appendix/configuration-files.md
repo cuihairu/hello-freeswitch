@@ -95,7 +95,7 @@ conf/
 | `loglevel` | `debug` | 全局日志级别 |
 | `core-db-dsn` | （注释） | core db 外移到 ODBC/PostgreSQL 的 DSN，多节点共享时配置 |
 | `max-db-handles` / `db-handle-timeout` | `50` / `10` | 数据库连接池 |
-| `rtp-start-port` / `rtp-end-port` | `16384` / `32768`（默认注释） | RTP 媒体端口段，防火墙需整段放行 |
+| `rtp-start-port` / `rtp-end-port` | `16384` / `32766`（默认注释） | RTP 媒体端口段，防火墙需整段放行 |
 | `switchname` | （注释） | HA 集群环境覆盖主机名，使多节点可用同一套配置 |
 | `dialplan-timestamps` | `false` | 拨号计划日志加时间戳 |
 | `min-dtmf-duration` / `max-dtmf-duration` / `default-dtmf-duration` | `400` / `192000` / `2000`（毫秒） | DTMF 时长约束 |
