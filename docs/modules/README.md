@@ -60,7 +60,7 @@ FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状
 | 接口类型 | 典型代表 | 查看命令 |
 | ---- | ---- | ---- |
 | API 命令 | `mod_commands`（`show`、`load`、`originate`…） | `fs_cli -x "show api"` |
-| Application | `mod_dptools`（`answer`、`bridge`、`playback`…） | `fs_cli -x "show application"` |
+| Application | `mod_dptools`（`answer`、`bridge`、`playback`…） | `fs_cli -x "show applications"` |
 | 端点 | `mod_sofia`（`sofia/`）、`mod_loopback`（`loopback/`） | `fs_cli -x "show endpoint"` |
 | 编解码 | `mod_opus`、`mod_spandsp` | `fs_cli -x "show codec"` |
 | 文件格式 | `mod_sndfile`（wav）、`mod_av`（mp4/mkv） | `fs_cli -x "show file"` |
@@ -140,7 +140,7 @@ fs_cli -x "show modules"
 
 # 各类接口分别查看
 fs_cli -x "show codec"        # 可用编解码
-fs_cli -x "show application"  # 可用 application
+fs_cli -x "show applications"  # 可用 application
 fs_cli -x "show api"          # 可用 API 命令
 fs_cli -x "show endpoint"     # 可用端点协议
 fs_cli -x "show interfaces"   # 全量接口汇总

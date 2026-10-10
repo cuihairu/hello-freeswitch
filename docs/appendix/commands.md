@@ -36,7 +36,7 @@ fs_cli -H 10.0.0.5 -p ClueCon -x "sofia status"   # -H 主机 -P 端口 -p 密�
 | `show detailed_calls` | 通话详情视图 | `fs_cli -x "show detailed_calls"` |
 | `show registrations` | 已注册分机 | `fs_cli -x "show registrations"` |
 | `show modules` | 已加载模块 | `fs_cli -x "show modules"` |
-| `show application` | 可用的 application（加名字查详情） | `fs_cli -x "show application"` |
+| `show applications` | 全部可用的 application；`show application <名字>` 查单个详情 | `fs_cli -x "show applications"` |
 | `show api` | 可用的 api 命令 | `fs_cli -x "show api"` |
 | `show codec` | 已加载的编解码 | `fs_cli -x "show codec"` |
 | `show dialplan` | 内存中的拨号计划 | `fs_cli -x "show dialplan"` |
