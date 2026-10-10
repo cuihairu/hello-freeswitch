@@ -8,7 +8,7 @@
 
 - 呼叫是用户视角的「一通电话」，至少两条通道（channel）经 bridge 连接而成；FreeSWITCH 内部没有 call 这个单一对象，它是 channel 之上的逻辑概念。计费、录音、转接都对「腿」操作，这是理解 FreeSWITCH 行为的钥匙。见[呼叫 (Call)](/concepts/call)。
 - 通道是最核心的内部对象：每个呼叫端点（SIP、WebRTC、loopback）都是一条 channel，有唯一 UUID、一组通道变量，沿状态机流转。见[通道 (Channel)](/concepts/channel)。
-- 会话是脚本视角的腿：Lua/JS 里的 session 对象封装一条 channel，对 session 的每个操作最终都作用在对应的 channel 状态机上。见[会话 (Session)](/concepts/session)。
+- 会话是脚本视角的腿：Lua 等脚本里的 session 对象封装一条 channel，对 session 的每个操作最终都作用在对应的 channel 状态机上。见[会话 (Session)](/concepts/session)。
 - `originate` 是外部控制呼叫的总入口（fs_cli、ESL、脚本通用），语法是 `originate [{变量=值,..}]<被叫> <接通后执行的动作>`，动作以 `&` 开头。见[呼叫 (Call)](/concepts/call)。
 
 ### 状态机与通道变量：${} 与 $${} 之别

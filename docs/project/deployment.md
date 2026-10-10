@@ -15,7 +15,7 @@
 ├── db/          核心数据库（core db，默认 SQLite）
 ├── log/         日志与 CDR（freeswitch.log、cdr-csv/）
 ├── recordings/  录音（$${recordings_dir}）
-├── scripts/     Lua/JS 脚本（$${script_dir}）
+├── scripts/     Lua 脚本（$${script_dir}）
 ├── sounds/      提示音与等待音乐
 ├── grammar/     语音识别语法文件
 ├── htdocs/      内置 HTTP 服务的静态目录

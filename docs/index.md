@@ -19,7 +19,7 @@ features:
   - title: 模块详解
     details: 模块化架构、Sofia/IVR/会议/网关/媒体等核心模块的配置与使用。
   - title: 高级功能
-    details: 事件系统、录音与监听、Lua/JavaScript 脚本、ESL 事件套接字编程。
+    details: 事件系统、录音与监听、Lua 脚本与 JavaScript 现状、ESL 事件套接字编程。
   - title: 实战项目
     details: 语音识别合成、NLP 集成，完整实现智能客服项目与部署运维。
 ---

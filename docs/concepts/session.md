@@ -1,6 +1,6 @@
 # 会话 (Session)
 
-在 FreeSWITCH 中，**会话（session）是从脚本与外部控制视角看到的一条通话通道**——脚本语言（Lua/JavaScript）里拿到的 `session` 对象，就是对一条 channel 的封装，并提供控制它的方法。底层机制见 [通道 (Channel)](/concepts/channel)。
+在 FreeSWITCH 中，**会话（session）是从脚本与外部控制视角看到的一条通话通道**——脚本语言（Lua 等）里拿到的 `session` 对象，就是对一条 channel 的封装，并提供控制它的方法。底层机制见 [通道 (Channel)](/concepts/channel)。
 
 ## Session 与 Channel 的关系
 
