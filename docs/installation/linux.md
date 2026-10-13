@@ -103,3 +103,20 @@ freeswitch@host> bye
 ## 下一步
 
 进入 [FreeSWITCH 的基本配置](/configuration/README)，了解配置文件体系；若你在 Windows 上体验，转到 [在 Windows 上安装](/installation/windows)。
+
+## 参考资料
+
+- [FreeSWITCH 官网](https://freeswitch.org/)
+- [Files · FreeSWITCH 发布文件](https://files.freeswitch.org/releases/freeswitch/)
+- [GitHub · signalwire/freeswitch releases](https://github.com/signalwire/freeswitch/releases)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [windows](windows.md)
+- [scenarios](/introduction/scenarios.md)
+- [README](/modules/README.md)
+- [media](/modules/media.md)
+- [sip](/modules/sip.md)
+- [deployment](/project/deployment.md)

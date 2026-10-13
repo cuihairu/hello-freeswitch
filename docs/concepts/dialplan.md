@@ -86,3 +86,17 @@ freeswitch@host> /log debug
 
 - [静态拨号计划](/concepts/static-dialplan)：XML 规则的字段级写法；
 - [动态拨号计划](/concepts/dynamic-dialplan)：用脚本与 XML 网关接管路由。
+
+## 参考资料
+
+- [Wikipedia · Dial plan](https://en.wikipedia.org/wiki/Dial_plan)
+- [SignalWire · 编程与脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [channel](channel.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](/project/README.md)

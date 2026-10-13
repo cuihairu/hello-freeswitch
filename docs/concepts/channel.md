@@ -91,3 +91,18 @@ loopback 通道在状态机里的行为与真实 SIP 通道一致，是构造复
 
 - [会话 (Session)](/concepts/session)：channel 的脚本封装与 Lua API；
 - [路由与拨号计划](/concepts/dialplan)：CS_ROUTING 阶段的规则引擎。
+
+## 参考资料
+
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [call](call.md)
+- [session](session.md)
+- [core-files](/configuration/core-files.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

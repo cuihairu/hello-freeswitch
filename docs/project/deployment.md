@@ -294,3 +294,17 @@ CDR 与录音同样要轮转归档：CSV/录音按天打包上传对象存储后
 - [网络设置](/configuration/network)：端口、防火墙与 NAT 的完整讲解；
 - [核心配置文件](/configuration/core-files)：本章提到的 vars.xml、modules.conf.xml 细节；
 - [附录 A · 配置文件详解](/appendix/configuration-files)：conf/ 目录逐文件参考。
+
+## 参考资料
+
+- [FreeSWITCH 官网](https://freeswitch.org/)
+- [GitHub · signalwire/freeswitch](https://github.com/signalwire/freeswitch)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [resources](/appendix/resources.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)
+- [implementation](implementation.md)

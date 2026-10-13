@@ -166,3 +166,16 @@ fs_cli -x "sofia status profile external" # 看监听地址、编解码、会话
 - [静态拨号计划](/concepts/static-dialplan)——`sofia/gateway/<网关>/<号码>` 的外呼写法；
 - [网络设置](/configuration/network)——端口放行与 NAT，排查单通的第一站；
 - [模块概述](/modules/README)——mod_sofia 在模块体系中的位置。
+
+## 参考资料
+
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [RFC 3263 · SIP DNS records](https://datatracker.ietf.org/doc/html/rfc3263)
+- [Wikipedia · PSTN](https://en.wikipedia.org/wiki/PSTN)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [media](media.md)

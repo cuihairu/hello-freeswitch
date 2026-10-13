@@ -112,3 +112,22 @@
 
 - [网络设置](/configuration/network)：把端口、防火墙与 NAT 调通；
 - [通道 (Channel)](/concepts/channel)：搞懂 `${var}` 背后的通道变量模型。
+
+## 参考资料
+
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+- [FreeSWITCH 官网](https://freeswitch.org/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [events](/advanced/events.md)
+- [recording](/advanced/recording.md)
+- [scripting](/advanced/scripting.md)
+- [configuration-files](/appendix/configuration-files.md)
+- [README](README.md)
+- [config-files](config-files.md)
+- [knowledge](/knowledge.md)
+- [README](/modules/README.md)
+- [sip](/modules/sip.md)
+- [deployment](/project/deployment.md)

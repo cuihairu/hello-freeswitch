@@ -88,3 +88,25 @@ fs_cli -x "sofia status profile internal"
 ## 下一步
 
 网络调通后，进入 [核心概念](/concepts/session)——会话、呼叫、通道与拨号计划，理解一次通话在 FreeSWITCH 内部的完整旅程。
+
+## 参考资料
+
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [RFC 3263 · SIP DNS records](https://datatracker.ietf.org/doc/html/rfc3263)
+- [Wikipedia · Session Initiation Protocol](https://en.wikipedia.org/wiki/Session_Initiation_Protocol)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [config-files](config-files.md)
+- [core-files](core-files.md)
+- [glossary](/glossary.md)
+- [linux](/installation/linux.md)
+- [windows](/installation/windows.md)
+- [knowledge](/knowledge.md)
+- [gateway](/modules/gateway.md)
+- [sip](/modules/sip.md)
+- [README](/project/README.md)
+- [asr-tts](/project/asr-tts.md)
+- [deployment](/project/deployment.md)

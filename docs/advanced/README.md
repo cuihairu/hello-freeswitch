@@ -17,3 +17,17 @@ FreeSWITCH 内部一切状态变化都以事件的形式发布在事件总线上
 ---
 
 阅读顺序建议：先[事件系统](./events.md)（ESL 是与外部系统集成的基础），再按业务需要选读[录音与监听](./recording.md)与[脚本与编程接口](./scripting.md)。实战整合见[智能客服项目](../project/README.md)。
+
+## 参考资料
+
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [events](events.md)
+- [recording](recording.md)
+- [scripting](scripting.md)
+- [knowledge](/knowledge.md)
+- [README](/project/README.md)

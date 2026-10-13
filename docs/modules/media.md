@@ -195,3 +195,17 @@ fs_cli -x "conference 3000 vid-banner 3 Welcome"           # 成员画面横幅�
 - [网关模块](/modules/gateway)——外呼时用 `absolute_codec_string` 收窄编解码的实战；
 - [静态拨号计划](/concepts/static-dialplan)——`record_session`、`playback` 等 application 用法；
 - [在 Linux 上安装](/installation/linux)——ffmpeg 等媒体依赖库的安装位置。
+
+## 参考资料
+
+- [RFC 3550 · RTP](https://datatracker.ietf.org/doc/html/rfc3550)
+- [RFC 4566 · SDP](https://datatracker.ietf.org/doc/html/rfc4566)
+- [Wikipedia · G.711](https://en.wikipedia.org/wiki/G.711)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [conference](conference.md)
+- [gateway](gateway.md)

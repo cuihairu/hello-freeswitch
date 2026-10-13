@@ -305,3 +305,20 @@ originate 结果: +OK 5f2a9b0e-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 - [会话 (Session)](/concepts/session)：Lua 里 session 对象的方法速查；
 - [动态拨号计划](/concepts/dynamic-dialplan)：Lua、mod_xml_curl、ESL 三条动态化路线的取舍；
 - [核心配置文件](/configuration/core-files)：`$${script_dir}`、`autoload_configs` 与模块配置加载。
+
+## 参考资料
+
+- [SignalWire · 编程与脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)
+- [SignalWire · 脚本集成](https://developer.signalwire.com/freeswitch/integration/scripting)
+- [Wikipedia · JSON](https://en.wikipedia.org/wiki/JSON)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [what-is-freeswitch](/introduction/what-is-freeswitch.md)
+- [knowledge](/knowledge.md)
+- [README](/project/README.md)
+- [asr-tts](/project/asr-tts.md)
+- [implementation](/project/implementation.md)
+- [nlp](/project/nlp.md)

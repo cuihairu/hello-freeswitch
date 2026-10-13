@@ -83,3 +83,18 @@ fs_cli -x "uuid_transfer <uuid> 1003 XML default"
 
 - [通道 (Channel)](/concepts/channel)：深入状态机与变量；
 - [静态拨号计划](/concepts/static-dialplan)：亲手写出上面这通 1001→1002 的路由。
+
+## 参考资料
+
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [Wikipedia · Session Initiation Protocol](https://en.wikipedia.org/wiki/Session_Initiation_Protocol)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [channel](channel.md)
+- [dialplan](dialplan.md)
+- [session](session.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

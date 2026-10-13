@@ -219,3 +219,17 @@ def classify(text):
 - [第 14 章 · 语音识别与合成](/project/asr-tts)：NLP 的上游——转写文本从哪来；
 - [第 16 章 · 实现智能客服功能](/project/implementation)：NLP 结果如何驱动会话状态机与坐席转接；
 - [脚本与编程接口](/advanced/scripting)：Lua 侧与后端协作时的脚本能力边界。
+
+## 参考资料
+
+- [Wikipedia · Natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing)
+- [Wikipedia · Voice recognition](https://en.wikipedia.org/wiki/Voice_recognition)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [resources](/appendix/resources.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)
+- [asr-tts](asr-tts.md)

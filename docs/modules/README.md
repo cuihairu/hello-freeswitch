@@ -175,3 +175,17 @@ fs_cli -x "reload mod_conference"
 - [SIP 模块](/modules/sip)——第一个要看的模块：mod_sofia；
 - [静态拨号计划](/concepts/static-dialplan)——application 如何在拨号计划里组合成路由；
 - [在 Linux 上安装](/installation/linux)——源码编译、模块裁剪与 `freeswitch-mod-*` 分包。
+
+## 参考资料
+
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [conference](conference.md)
+- [gateway](gateway.md)
+- [ivr](ivr.md)
+- [sip](sip.md)

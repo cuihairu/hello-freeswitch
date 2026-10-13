@@ -94,3 +94,20 @@ conf/
 - [核心配置文件](/configuration/core-files)：三大核心文件的字段级讲解；
 - [网络设置](/configuration/network)：profile 监听与 NAT；
 - [静态拨号计划](/concepts/static-dialplan)：动手写第一条路由规则。
+
+## 参考资料
+
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [configuration-files](/appendix/configuration-files.md)
+- [README](README.md)
+- [core-files](core-files.md)
+- [windows](/installation/windows.md)
+- [knowledge](/knowledge.md)
+- [README](/modules/README.md)
+- [conference](/modules/conference.md)
+- [ivr](/modules/ivr.md)

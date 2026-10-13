@@ -211,3 +211,18 @@ fs_cli -x "sofia profile internal restart"     # 改监听地址/端口等必须
 - [核心配置文件](/configuration/core-files)——`directory/default/1000.xml` 分机文件详解；
 - [静态拨号计划](/concepts/static-dialplan)——注册用户呼出如何路由；
 - [在 Linux 上安装](/installation/linux)——装好再回来配 SIP。
+
+## 参考资料
+
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [RFC 3263 · SIP DNS records](https://datatracker.ietf.org/doc/html/rfc3263)
+- [Wikipedia · Session Initiation Protocol](https://en.wikipedia.org/wiki/Session_Initiation_Protocol)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)
+- [gateway](gateway.md)
+- [media](media.md)

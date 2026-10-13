@@ -36,3 +36,14 @@ FreeSWITCH 的官方主战场是 Linux 服务器。本节介绍支持的平台�
 - [在 Windows 上安装](/installation/windows)：安装包与 WSL2 方案。
 
 安装完成后，进入 [FreeSWITCH 的基本配置](/configuration/README)。
+
+## 参考资料
+
+- [FreeSWITCH 官网](https://freeswitch.org/)
+- [Files · FreeSWITCH 发布文件](https://files.freeswitch.org/releases/freeswitch/)
+- [GitHub · signalwire/freeswitch releases](https://github.com/signalwire/freeswitch/releases)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [what-is-freeswitch](/introduction/what-is-freeswitch.md)

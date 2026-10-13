@@ -164,3 +164,25 @@ s.close()
 ## 下一步
 
 本章完成基础篇全部内容。模块详解篇将覆盖 Sofia/IVR/会议/网关等模块的具体配置与命令，脚本与 ESL 编程在高级功能篇深入。
+
+## 参考资料
+
+- [Wikipedia · Dial plan](https://en.wikipedia.org/wiki/Dial_plan)
+- [SignalWire · 编程与脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)
+- [SignalWire · 脚本集成](https://developer.signalwire.com/freeswitch/integration/scripting)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [events](/advanced/events.md)
+- [recording](/advanced/recording.md)
+- [scripting](/advanced/scripting.md)
+- [dialplan](dialplan.md)
+- [session](session.md)
+- [static-dialplan](static-dialplan.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [ivr](/modules/ivr.md)
+- [asr-tts](/project/asr-tts.md)
+- [deployment](/project/deployment.md)
+- [implementation](/project/implementation.md)

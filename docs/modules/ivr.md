@@ -201,3 +201,16 @@ end
 - [会议模块](/modules/conference)——IVR 常见的出口之一：转会议；
 - [配置文件结构](/configuration/config-files)——`ivr_menus/`、`lang/` 在 `conf/` 中的位置；
 - [模块概述](/modules/README)——`ivr`、`play_and_get_digits` 这些 application 由哪个模块提供。
+
+## 参考资料
+
+- [Wikipedia · Interactive voice response](https://en.wikipedia.org/wiki/Interactive_voice_response)
+- [Wikipedia · Voice recognition](https://en.wikipedia.org/wiki/Voice_recognition)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [conference](conference.md)
+- [README](/project/README.md)
+- [implementation](/project/implementation.md)

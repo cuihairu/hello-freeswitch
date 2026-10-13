@@ -105,3 +105,24 @@ features.xml 中定义的特征码在通话进行中生效（先按 `*98` 进入
 ## 下一步
 
 规则写死在文件里不够用时，转到 [动态拨号计划](/concepts/dynamic-dialplan)：用 Lua 脚本、mod_xml_curl 与 ESL 把路由交给代码与数据库。
+
+## 参考资料
+
+- [Wikipedia · Dial plan](https://en.wikipedia.org/wiki/Dial_plan)
+- [SignalWire · 编程与脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [configuration-files](/appendix/configuration-files.md)
+- [call](call.md)
+- [dialplan](dialplan.md)
+- [config-files](/configuration/config-files.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](/modules/README.md)
+- [conference](/modules/conference.md)
+- [gateway](/modules/gateway.md)
+- [ivr](/modules/ivr.md)
+- [media](/modules/media.md)
+- [sip](/modules/sip.md)

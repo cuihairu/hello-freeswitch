@@ -66,3 +66,15 @@ mod_conference 提供混音会议能力：多方呼入、主持人控制、会�
 - [在 Linux 上安装](/installation/linux)——服务器环境首选；
 - [在 Windows 上安装](/installation/windows)——本机体验与开发调试；
 - 安装完成后回到 [FreeSWITCH 的基本配置](/configuration/README) 熟悉配置体系。
+
+## 参考资料
+
+- [Wikipedia · Voice over IP](https://en.wikipedia.org/wiki/Voice_over_IP)
+- [Wikipedia · Call center](https://en.wikipedia.org/wiki/Call_center)
+- [Wikipedia · Softswitch](https://en.wikipedia.org/wiki/Softswitch)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [what-is-freeswitch](what-is-freeswitch.md)
+- [knowledge](/knowledge.md)

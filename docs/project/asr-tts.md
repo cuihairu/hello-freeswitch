@@ -185,3 +185,18 @@ def transcribe(wav_path, endpoint, api_key):
 - [事件系统](/advanced/events)：`RECORD_STOP` 等事件的订阅与解析；
 - [网络设置](/configuration/network)：媒体流旁路涉及的 RTP 端口与防火墙；
 - [第 15 章 · 自然语言处理](/project/nlp)：拿到转写文本之后的意图识别与应答。
+
+## 参考资料
+
+- [Wikipedia · Speech synthesis](https://en.wikipedia.org/wiki/Speech_synthesis)
+- [Wikipedia · Speech recognition](https://en.wikipedia.org/wiki/Voice_recognition)
+- [GitHub · alphacep/vosk-api](https://github.com/alphacep/vosk-api)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [resources](/appendix/resources.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)
+- [nlp](nlp.md)

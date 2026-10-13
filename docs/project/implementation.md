@@ -389,3 +389,17 @@ fs_cli -x "status"
 - [脚本与编程接口](/advanced/scripting)：mod_lua 脚本 API 全集；
 - [事件系统](/advanced/events)：ESL 事件订阅、自定义事件的更多细节；
 - [第 17 章 · 部署与运维](/project/deployment)：这套系统上线后的运行与排障。
+
+## 参考资料
+
+- [SignalWire · 编程与脚本 API](https://developer.signalwire.com/freeswitch/programming/scripting-apis)
+- [SignalWire · 脚本集成](https://developer.signalwire.com/freeswitch/integration/scripting)
+- [Wikipedia · JSON](https://en.wikipedia.org/wiki/JSON)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [resources](/appendix/resources.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)
+- [nlp](nlp.md)

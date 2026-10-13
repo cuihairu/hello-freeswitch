@@ -54,3 +54,14 @@
 
 ### 总结
 从固定电话到移动电话，再到互联网电话和移动互联网电话，通信技术不断创新和演进。每一个阶段的发展都显著改变了人们的交流方式，提高了通信的效率和便利性。随着5G、物联网（IoT）、人工智能（AI）等新技术的应用，未来的通信技术将会更加智能化和多样化。
+
+## 参考资料
+
+- [Wikipedia · Telephony](https://en.wikipedia.org/wiki/Telephony)
+- [Wikipedia · PSTN](https://en.wikipedia.org/wiki/PSTN)
+- [Wikipedia · Voice over IP](https://en.wikipedia.org/wiki/Voice_over_IP)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)

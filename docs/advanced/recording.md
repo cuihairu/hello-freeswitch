@@ -230,3 +230,17 @@ find "$RECORD_DIR" -mindepth 1 -type d -empty -delete
 - [会话 (Session)](/concepts/session)：`${uuid}` 等通道变量从哪里来；
 - [动态拨号计划](/concepts/dynamic-dialplan)：把录音/监听逻辑交给 Lua 脚本动态决策；
 - [核心配置文件](/configuration/core-files)：`$${recordings_dir}` 等全局变量的定义与生效方式。
+
+## 参考资料
+
+- [RFC 3550 · RTP](https://datatracker.ietf.org/doc/html/rfc3550)
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [knowledge](/knowledge.md)
+- [asr-tts](/project/asr-tts.md)
+- [implementation](/project/implementation.md)

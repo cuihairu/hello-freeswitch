@@ -200,3 +200,14 @@ conf/
 | 全局变量 `$${}` | `reloadxml`（只影响之后的新呼叫） |
 
 核查生效值的习惯动作：`global_getvar`、`sofia status profile <名>`、`show modules`，再打一通测试电话验证。
+
+## 参考资料
+
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [resources](resources.md)
+- [deployment](/project/deployment.md)

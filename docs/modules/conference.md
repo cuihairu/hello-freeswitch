@@ -229,3 +229,17 @@ fs_cli -x "conference 3000 recording pause /usr/local/freeswitch/recordings/3000
 - [静态拨号计划](/concepts/static-dialplan)——把进线话路转进会议的拨号写法；
 - [IVR 模块](/modules/ivr)——IVR 菜单转会议的典型组合；
 - [配置文件结构](/configuration/config-files)——`conference.conf.xml` 的加载位置。
+
+## 参考资料
+
+- [Wikipedia · Conference call](https://en.wikipedia.org/wiki/Conference_call)
+- [RFC 3550 · RTP](https://datatracker.ietf.org/doc/html/rfc3550)
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [ivr](ivr.md)
+- [media](media.md)

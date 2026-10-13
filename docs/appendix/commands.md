@@ -188,3 +188,15 @@ sox in.wav out.wav fade t 0.3 0 0.5
 - 排障先 `/log debug` 或 `sofia profile internal siptrace on`，看到现象再收敛级别，避免长期全量 debug 写爆磁盘；
 - `fs_cli -x` 适合脚本与监控采集，交互模式适合人工排查；
 - 任何配置改动后先 `reloadxml` 再打测试电话，用 `uuid_dump` 核对通道变量是否符合预期。
+
+## 参考资料
+
+- [FreeSWITCH 官网](https://freeswitch.org/)
+- [GitHub · signalwire/freeswitch releases](https://github.com/signalwire/freeswitch/releases)
+- [GitHub · signalwire/freeswitch](https://github.com/signalwire/freeswitch)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [resources](resources.md)
+- [asr-tts](/project/asr-tts.md)

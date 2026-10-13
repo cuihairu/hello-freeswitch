@@ -76,3 +76,14 @@
 
 - 实战项目篇：[第 13 章 · 项目概述](/project/README)、[第 14 章 · 语音识别与合成](/project/asr-tts)、[第 15 章 · 自然语言处理](/project/nlp)、[第 16 章 · 实现智能客服功能](/project/implementation)、[第 17 章 · 部署与运维](/project/deployment)；
 - 附录：[附录 A · 配置文件详解](/appendix/configuration-files)、[附录 B · 常用命令与工具](/appendix/commands)、本页。
+
+## 参考资料
+
+- [FreeSWITCH 邮件列表](https://lists.freeswitch.org/)
+- [FreeSWITCH 官网](https://freeswitch.org/)
+- [GitHub · signalwire/freeswitch issues](https://github.com/signalwire/freeswitch/issues)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)

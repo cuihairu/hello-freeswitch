@@ -74,3 +74,22 @@ ESL 编程详见本手册高级功能篇。
 - [通道 (Channel)](/concepts/channel)：session 背后的状态机与变量；
 - [呼叫 (Call)](/concepts/call)：两条 session 如何被 bridge 成完整通话；
 - [动态拨号计划](/concepts/dynamic-dialplan)：脚本驱动的路由实战。
+
+## 参考资料
+
+- [RFC 3261 · SIP](https://datatracker.ietf.org/doc/html/rfc3261)
+- [RFC 3550 · RTP](https://datatracker.ietf.org/doc/html/rfc3550)
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [events](/advanced/events.md)
+- [recording](/advanced/recording.md)
+- [scripting](/advanced/scripting.md)
+- [call](call.md)
+- [channel](channel.md)
+- [README](/configuration/README.md)
+- [network](/configuration/network.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

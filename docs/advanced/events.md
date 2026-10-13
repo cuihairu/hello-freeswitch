@@ -247,3 +247,17 @@ Lua 运行环境的细节（脚本目录、`luarun`、`startup-script`）见第 
 - [会话 (Session)](/concepts/session)：通道变量如何进入事件头，脚本视角的同一套状态机；
 - [动态拨号计划](/concepts/dynamic-dialplan)：Lua/ESL 与拨号计划的三条配合路线；
 - [核心配置文件](/configuration/core-files)：`autoload_configs` 目录与模块配置的加载方式。
+
+## 参考资料
+
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [knowledge](/knowledge.md)
+- [README](/project/README.md)
+- [asr-tts](/project/asr-tts.md)
+- [implementation](/project/implementation.md)

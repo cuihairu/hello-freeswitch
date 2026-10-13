@@ -112,3 +112,15 @@
 - [脚本与编程接口](/advanced/scripting)：mod_lua 的执行模型与脚本 API；
 - [模块详解篇 · IVR](/modules/ivr)：内置 IVR 菜单的配置写法；
 - [路由与拨号计划](/concepts/dialplan)：客服入口路由的承载层。
+
+## 参考资料
+
+- [Wikipedia · Natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing)
+- [Wikipedia · Virtual assistant](https://en.wikipedia.org/wiki/Virtual_assistant)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](/advanced/README.md)
+- [resources](/appendix/resources.md)
+- [knowledge](/knowledge.md)

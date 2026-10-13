@@ -41,3 +41,18 @@ FreeSWITCH 的本质是三层能力的组合：
 - 希望系统学习 FreeSWITCH 配置体系、拨号计划与 ESL 编程的初学者。
 
 阅读本章后，可继续阅读 [FreeSWITCH 的应用场景](/introduction/scenarios) 了解典型用法，或直接跳到 [FreeSWITCH 的安装](/installation/README) 动手部署。
+
+## 参考资料
+
+- FreeSWITCH 官方文档与站点（freeswitch.org / SignalWire 开发者文档）——本仓概念与配置口径的主要来源。
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+- [Wikipedia · Voice over IP](https://en.wikipedia.org/wiki/Voice_over_IP)
+- [FreeSWITCH 官网](https://freeswitch.org/)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [scripting](/advanced/scripting.md)
+- [README](/installation/README.md)
+- [scenarios](scenarios.md)
+- [knowledge](/knowledge.md)

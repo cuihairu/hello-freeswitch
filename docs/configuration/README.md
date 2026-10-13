@@ -39,3 +39,16 @@ fs_cli -x "reload mod_conference"     # 重载单个模块（先 unload 再 load
 - [网络设置](/configuration/network)——端口、防火墙与 NAT。
 
 基础配置完成后，读 [核心概念](/concepts/session) 理解呼叫在 FreeSWITCH 内部如何流动。
+
+## 参考资料
+
+- [SignalWire · FreeSWITCH 文档](https://developer.signalwire.com/freeswitch/)
+- [Wikipedia · FreeSWITCH](https://en.wikipedia.org/wiki/FreeSWITCH)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](/installation/README.md)
+- [linux](/installation/linux.md)
+- [windows](/installation/windows.md)
+- [scenarios](/introduction/scenarios.md)
