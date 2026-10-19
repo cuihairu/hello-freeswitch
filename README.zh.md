@@ -13,13 +13,13 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-FreeSWITCH 知识手册 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/)
+FreeSWITCH 个人学习笔记、心得与开发经验分享 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/)
 
 </div>
 
 ---
 
-从安装配置、核心概念与拨号计划，到模块详解、脚本与 ESL，再到智能客服项目实战的 FreeSWITCH 中文知识站点。
+这是个人整理的 FreeSWITCH 学习笔记、实践心得与开发经验，以游戏开发者的视角记录安装配置、核心概念、模块、脚本与 ESL，以及智能客服项目中的经验。
 
 ## 知识地图
 

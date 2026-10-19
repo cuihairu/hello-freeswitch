@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Hello FreeSWITCH
-  text: FreeSWITCH 知识手册
-  tagline: 从安装配置、核心概念与拨号计划，到模块详解、脚本与 ESL，再到智能客服项目实战，把开源软交换平台讲全讲透。
+  text: FreeSWITCH 学习笔记与开发经验
+  tagline: 记录安装配置、核心概念、模块、脚本与 ESL，以及智能客服项目实践中的心得。
   actions:
     - theme: brand
       text: 开始阅读
@@ -14,7 +14,7 @@ hero:
       link: https://github.com/cuihairu/hello-freeswitch
 
 features:
-  - title: 基础篇
+  - title: 核心概念与基础配置
     details: 电话与 VoIP 发展史、FreeSWITCH 定位与场景、Linux/Windows 安装、配置文件体系与网络设置。
   - title: 模块详解
     details: 模块化架构、Sofia/IVR/会议/网关/媒体等核心模块的配置与使用。

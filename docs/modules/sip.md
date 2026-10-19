@@ -55,7 +55,7 @@ fs_cli -x "sofia loglevel all 9"        # sofia-sip 协议栈日志（级别 0-9
 | profile | 文件 | 职责 |
 | ---- | ---- | ---- |
 | `internal` | `sip_profiles/internal.xml` | 收分机注册与内呼，端口 `$${internal_sip_port}`（默认 5060） |
-| `external` | `sip_profiles/external.xml` | 对接运营商/网关，端口 `$${external_sip_port}`（默认 5080），网关定义在其子目录 `sip_profiles/external/*.xml`（第 8 章） |
+| `external` | `sip_profiles/external.xml` | 对接运营商/网关，端口 `$${external_sip_port}`（默认 5080），网关定义在其子目录 `sip_profiles/external/*.xml`（网关模块） |
 
 呼叫目标写成端点 URI，由拨号计划里的 `bridge` 使用：
 
@@ -70,7 +70,7 @@ fs_cli -x "sofia status"                             # profile 概览
 fs_cli -x "sofia status profile internal"            # 运行参数：端口、IP、ACL、编解码
 fs_cli -x "sofia status profile internal reg"        # 已注册分机列表
 fs_cli -x "sofia status profile internal user 1000@pbx.example.com"
-fs_cli -x "sofia status gateway carrier1"            # 网关注册状态（第 8 章）
+fs_cli -x "sofia status gateway carrier1"            # 网关注册状态（网关模块）
 fs_cli -x "sofia_contact 1000@pbx.example.com"       # 查分机注册的 contact 地址
 ```
 
@@ -121,7 +121,7 @@ fs_cli -x "sofia_contact 1000@pbx.example.com"       # 查分机注册的 contac
 | `disable-register` | 完全关闭该 profile 的注册功能（纯中继 profile 用） |
 | `log-auth-failures` | 把认证失败写入日志 |
 | `max-recv-requests-per-second` | 单 profile 每秒收包限速，超速回 503（防扫描洪泛） |
-| `inbound-codec-prefs` / `outbound-codec-prefs` | 收/发方向提供的编解码列表（第 9 章） |
+| `inbound-codec-prefs` / `outbound-codec-prefs` | 收/发方向提供的编解码列表（媒体处理模块） |
 | `inbound-codec-negotiation` | `generous` 宽松、`greedy` 严格 |
 | `inbound-late-negotiation` | 先进拨号计划再定编解码，配合 `absolute_codec_string` 使用 |
 | `rtp-timeout-sec` / `rtp-hold-timeout-sec` | RTP 中断多久判定掉线/保持超时 |

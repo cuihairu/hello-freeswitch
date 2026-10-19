@@ -112,7 +112,7 @@ Channel-Call-State: RINGING
 
 ## ESL 事件订阅
 
-外部程序用 ESL（Event Socket Library，见第 12 章）连上 8021 端口后，订阅事件的方式与 fs_cli 相同，只是要自己处理协议。
+外部程序用 ESL（Event Socket Library，见脚本与编程接口）连上 8021 端口后，订阅事件的方式与 fs_cli 相同，只是要自己处理协议。
 
 ### 连接与认证
 
@@ -177,7 +177,7 @@ bgapi originate user/1001 &echo()
 ...等待事件，按 Job-UUID 匹配...
 ```
 
-第 12 章的 Python 示例完整演示了这条链路。
+脚本与编程接口的 Python 示例完整演示了这条链路。
 
 ## 自定义事件
 
@@ -240,7 +240,7 @@ while true do
 end
 ```
 
-Lua 运行环境的细节（脚本目录、`luarun`、`startup-script`）见第 12 章「脚本与编程接口」。
+Lua 运行环境的细节（脚本目录、`luarun`、`startup-script`）见[脚本与编程接口](/advanced/scripting)。
 
 ## 相关阅读
 

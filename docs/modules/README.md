@@ -1,6 +1,6 @@
 # 模块概述
 
-FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状态机、XML 配置引擎。SIP、会议、语音信箱、录音、编解码……所有具体能力都由**模块（module）**提供。本篇是「模块详解篇」的入口，第 5～9 章分别展开 SIP、IVR、会议、网关与媒体处理。
+FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状态机、XML 配置引擎。SIP、会议、语音信箱、录音、编解码……所有具体能力都由**模块（module）**提供。本页是模块笔记的入口，相关记录分别介绍 [SIP](/modules/sip)、[IVR](/modules/ivr)、[会议](/modules/conference)、[网关](/modules/gateway)与[媒体处理](/modules/media)。
 
 ## 什么是模块
 
@@ -92,7 +92,7 @@ FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状
 
 | 模块 | 作用 |
 | ---- | ---- |
-| `mod_conference` | 多方会议（第 7 章） |
+| `mod_conference` | 多方会议（会议模块） |
 | `mod_voicemail` | 语音信箱 |
 | `mod_fifo` / `mod_callcenter` | 排队与坐席 |
 | `mod_valet_parking` | 呼叫驻留 |
@@ -100,7 +100,7 @@ FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状
 | `mod_httapi` | 由 HTTP 接口驱动的呼叫控制 |
 | `mod_directory` | 分机目录拨号与语音播报 |
 | `mod_esf` / `mod_spy` | 扩展转发、通话监听 |
-| `mod_av` / `mod_fsv` | 多媒体容器读写、原生视频录制（第 9 章） |
+| `mod_av` / `mod_fsv` | 多媒体容器读写、原生视频录制（媒体处理模块） |
 
 ### 编解码模块
 
@@ -115,7 +115,7 @@ FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状
 
 | 模块 | 作用 |
 | ---- | ---- |
-| `mod_sofia` | SIP 协议栈，internal/external 两个 profile 与全部网关（第 5、8 章） |
+| `mod_sofia` | SIP 协议栈，internal/external 两个 profile 与全部网关（见 [SIP 模块](/modules/sip) 与[网关模块](/modules/gateway)） |
 | `mod_verto` | Verto 协议，浏览器 WebRTC 客户端 |
 | `mod_rtc` | WebRTC SDP 协商辅助 |
 | `mod_skinny` | Cisco SCCP 协议 |

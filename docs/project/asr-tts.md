@@ -1,4 +1,4 @@
-# 第 14 章 · 语音识别与合成
+# 语音识别与合成
 
 客服机器人要"听得懂、说得出"，就绕不开 ASR（Automatic Speech Recognition，语音转文本）与 TTS（Text To Speech，文本转语音）。本章讲清三件事：识别的两种接入思路、FreeSWITCH 侧的对接手段（含社区音频流模块与不依赖第三方模块的通用对接法）、TTS 的两条落地路线，最后给出一份商用/自选型对比清单。
 
@@ -72,7 +72,7 @@ uuid_audio_stream <uuid> stop <metadata>
 
 ## 通用对接法：ESL 订阅 + 录音文件后识别
 
-不装任何第三方模块也能做语音识别，这就是第 13 章说的"逐句识别"路线，只需要官方自带的录音能力加一个后台程序：
+不装任何第三方模块也能做语音识别，这就是智能客服项目概述说的"逐句识别"路线，只需要官方自带的录音能力加一个后台程序：
 
 1. IVR/Lua 脚本用 `record`（或 `session:recordFile`）录下客户这句话，录音结束后 FreeSWITCH 会设置通道变量 `record_seconds`、`record_samples`，并触发 `RECORD_STOP` 事件（带 `Record-Filepath` 等头）；
 2. 业务后端通过 ESL 订阅 `RECORD_STOP` / `CHANNEL_EXECUTE_COMPLETE`，拿到录音路径；
@@ -184,7 +184,7 @@ def transcribe(wav_path, endpoint, api_key):
 - [脚本与编程接口](/advanced/scripting)：Lua 脚本的执行模型与 `session:recordFile` 等 API；
 - [事件系统](/advanced/events)：`RECORD_STOP` 等事件的订阅与解析；
 - [网络设置](/configuration/network)：媒体流旁路涉及的 RTP 端口与防火墙；
-- [第 15 章 · 自然语言处理](/project/nlp)：拿到转写文本之后的意图识别与应答。
+- [自然语言处理](/project/nlp)：拿到转写文本之后的意图识别与应答。
 
 ## 参考资料
 

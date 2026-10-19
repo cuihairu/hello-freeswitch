@@ -1,4 +1,4 @@
-# 第 16 章 · 实现智能客服功能
+# 实现智能客服功能
 
 本章把前三章的零件装成整车：IVR 接入来电、语音识别拿到文本、NLP 判定意图、机器人应答或转坐席。所有示例代码都可以直接落地（Lua 片段经 `luac -p` 校验，Python 片段经语法编译校验），并标注了每一步对应的真实命令。
 
@@ -205,7 +205,7 @@ def handle_call(conn, uuid, state):
     # 伪代码：挂在媒体 bug 推流给 ASR（已编译安装 mod_audio_stream 时）
     #   api(f, f"uuid_audio_stream {uuid} start ws://asr:9090 mixed 8k {uuid}")
     # ASR 服务回调/消息队列里拿到转写文本后：
-    #   intent, reply = nlp(text, state)            # 第 15 章的 NLP 网关
+    #   intent, reply = nlp(text, state)            # 自然语言处理的 NLP 网关
     #   api(f, f"uuid_broadcast {uuid} /srv/prompts/{intent}.wav both")
     # 转人工（先发起坐席腿并停入 park，再桥接两腿）：
     #   api(f, "originate user/1001 &park()")       # 从 BACKGROUND_JOB 拿坐席腿 UUID
@@ -257,11 +257,11 @@ if __name__ == "__main__":
 
 ## NLP 处理与响应：会话状态机
 
-把第 15 章的 NLP 网关接到状态机上。核心是一个以通话 UUID 为键的会话表，每个状态一个处理函数：
+把自然语言处理的 NLP 网关接到状态机上。核心是一个以通话 UUID 为键的会话表，每个状态一个处理函数：
 
 ```python
 # cc_fsm.py — 会话状态机（业务逻辑层）
-import rule_nlu                      # 第 15 章的规则兜底
+import rule_nlu                      # 自然语言处理的规则兜底
 
 
 class Session:
@@ -388,7 +388,7 @@ fs_cli -x "status"
 - [录音与监听](/advanced/recording)：本章用到的录音 API 与路径变量完整说明；
 - [脚本与编程接口](/advanced/scripting)：mod_lua 脚本 API 全集；
 - [事件系统](/advanced/events)：ESL 事件订阅、自定义事件的更多细节；
-- [第 17 章 · 部署与运维](/project/deployment)：这套系统上线后的运行与排障。
+- [部署与运维](/project/deployment)：这套系统上线后的运行与排障。
 
 ## 参考资料
 

@@ -17,7 +17,7 @@ Lua 由 `mod_lua` 提供，模块加载后读取 `conf/autoload_configs/lua.conf
     <!-- 启动时后台运行的常驻脚本，可以配置多行 -->
     <!--<param name="startup-script" value="startup_script_1.lua"/>-->
 
-    <!-- 事件钩子：把某类事件交给脚本处理（见第 10 章） -->
+    <!-- 事件钩子：把某类事件交给脚本处理（见事件系统） -->
     <!--<hook event="CUSTOM" subclass="conference::maintenance" script="catch-event.lua"/>-->
   </settings>
 </configuration>
@@ -135,7 +135,7 @@ dialplan 里用 `socket` application 把一条新通话"递"给你的程序：
 
 outbound 连接免认证，且天然只针对这一通电话：程序接受连接后先发 `connect`，FreeSWITCH 会回一条序列化好的 `CHANNEL_DATA` 事件（包含该通道的全部变量），之后就能用 `sendmsg` 执行 application、应答、挂断，配合 `myevents`、`linger` 控制事件与挂断时机。适合做呼叫中心的自定义媒体流程、验证码外呼等"一通电话一个会话"的场景。
 
-协议细节（`event`、`bgapi`、`BACKGROUND_JOB` 取异步结果、自定义事件）见第 10 章「事件系统」。
+协议细节（`event`、`bgapi`、`BACKGROUND_JOB` 取异步结果、自定义事件）见[事件系统](/advanced/events)。
 
 ## ESL 编程示例
 

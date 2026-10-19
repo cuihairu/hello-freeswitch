@@ -5,7 +5,7 @@ import sidebar from './sidebar.json'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Hello FreeSWITCH',
-  description: 'FreeSWITCH 知识手册——安装配置、核心概念、拨号计划与智能客服实战',
+  description: 'FreeSWITCH 个人学习笔记与开发经验分享——安装配置、核心概念、拨号计划与项目实践',
   base: '/hello-freeswitch/',
   cleanUrls: true,
   lastUpdated: true,

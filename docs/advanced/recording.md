@@ -70,7 +70,7 @@ uuid_record <uuid> [start|stop|mask|unmask] <path> [<limit>] [<recording_vars>]
 - `<recording_vars>`：用 `{}` 包起来的变量表，临时覆盖通道上的 `RECORD_*` 变量，例如 `uuid_record <uuid> start /tmp/x.wav 0 {RECORD_STEREO=true}`；
 - `mask` / `unmask`：让这段录音里写入静音（通话不受影响）/恢复写入真实音频，同样用于屏蔽敏感内容。
 
-结合第 10 章的事件：录音真正开始和结束时会有 `RECORD_START` / `RECORD_STOP` 事件，外部系统可以用它们核对每一条录音文件是否落盘。
+结合事件系统的事件：录音真正开始和结束时会有 `RECORD_START` / `RECORD_STOP` 事件，外部系统可以用它们核对每一条录音文件是否落盘。
 
 ### record 应用：录一段留言
 

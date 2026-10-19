@@ -22,15 +22,15 @@
 | Releases | <https://github.com/signalwire/freeswitch/releases> | 版本发布与变更记录 |
 | 官方 GitLab | `gitlab.freeswitch.org` | 项目自建 GitLab 实例；网络不可达时以上面 GitHub 镜像为准（此处只写主机名不作链接，以官方入口为准） |
 
-与本手册实战篇直接相关的第三方仓库：
+与智能客服项目记录直接相关的第三方仓库：
 
 | 项目 | 链接 | 用途 |
 | ---- | ---- | ---- |
 | drachtio-freeswitch-modules | <https://github.com/mdslaney/drachtio-freeswitch-modules> | drachtio 社区的 FreeSWITCH 模块仓库，`mod_audio_fork` 位于 `modules/mod_audio_fork`（media bug 抓流送 WebSocket，语音 AI 集成的参考实现；原 drachtio 组织下的路径已失效，当前以此镜像为准） |
-| mod_audio_stream | <https://github.com/amigniter/mod_audio_stream> | WebSocket 双向音频流模块（第 14 章详述），需自行编译 |
+| mod_audio_stream | <https://github.com/amigniter/mod_audio_stream> | WebSocket 双向音频流模块（语音识别与合成详述），需自行编译 |
 | Vosk | <https://github.com/alphacep/vosk-api> | 可自托管的开源离线 ASR（含中文模型），常与音频流模块配合 |
 | UniMRCP | <https://www.unimrcp.org/> | 开源 MRCP 客户端/服务端框架，`mod_unimrcp` 的底层依赖，官网含 FreeSWITCH 集成教程 |
-| SIPp | <https://github.com/SIPp/sipp> | SIP 协议级压测工具（第 16 章压测提到的进阶方案） |
+| SIPp | <https://github.com/SIPp/sipp> | SIP 协议级压测工具（实现智能客服功能压测提到的进阶方案） |
 
 ## 社区与会议
 
@@ -74,7 +74,7 @@
 
 ## 本站导航
 
-- 实战项目篇：[第 13 章 · 项目概述](/project/README)、[第 14 章 · 语音识别与合成](/project/asr-tts)、[第 15 章 · 自然语言处理](/project/nlp)、[第 16 章 · 实现智能客服功能](/project/implementation)、[第 17 章 · 部署与运维](/project/deployment)；
+- 智能客服项目记录：[智能客服项目概述](/project/README)、[语音识别与合成](/project/asr-tts)、[自然语言处理](/project/nlp)、[实现智能客服功能](/project/implementation)、[部署与运维](/project/deployment)；
 - 附录：[附录 A · 配置文件详解](/appendix/configuration-files)、[附录 B · 常用命令与工具](/appendix/commands)、本页。
 
 ## 参考资料

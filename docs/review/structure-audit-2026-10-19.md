@@ -1,6 +1,8 @@
 # hello-freeswitch 文档结构审计（2026-10-19）
 
-> 范围：只读核查仓库中的文档目录、页面命名、VitePress 导航与本地链接。未改动既有文档或导航配置。本报告依据当前工作区内容；不评价文档技术准确性。
+> 范围：本报告前半部分记录收口前的结构审计基线；末尾“收口执行记录”更新 A/B/C 的处置、证据与验收结果。不评价文档技术准确性。
+
+> 前半部分的行数、目录映射和结论是执行前基线；导航与正文现状以末尾执行记录及当前文件为准。
 
 ## 量化事实
 
@@ -96,3 +98,31 @@
 - `npm run docs:build`：成功，VitePress 1.6.4 完成客户端/服务端构建、页面渲染和 sitemap 生成。
 - 本地 Markdown 链接检查：0 个失效目标；侧边栏：36 个链接、0 个缺失目标；页面未列入 sidebar：仅首页 `docs/index.md`。
 - 本次审计报告创建前 `git status` 干净；构建产物位于忽略目录 `docs/.vitepress/dist/`，不纳入提交。
+
+## 收口执行记录（2026-10-19）
+
+### A：导航单一真源
+
+- 权威源定为 VitePress 的 `docs/.vitepress/sidebar.json`；维护规则写入 `docs/SUMMARY.md:1-5`，保留文件但将手写目录改成指向真源的说明页。VitePress 排除规则与唯一真源注释见 `docs/.vitepress/config.mts:27-28,56-57`。
+- 同一侧栏的重复路由数为 **0**（36 个链接、36 个唯一链接）；无需移除条目。跨侧栏复用不计重复。
+
+### B：跨轴内容逐组判定
+
+| 组 | 分类 | 两处文本对比证据 | 处置 |
+|---|---|---|---|
+| `configuration/config-files.md` 与 `appendix/configuration-files.md` 的配置目录总览 | **真重复，1 组**：两处分别都列出 `freeswitch.xml`、`vars.xml`、`autoload_configs/`、`sip_profiles/`、`dialplan/`、`directory/` 等同一组目录；原附录还重复 vanilla 模板文件与 TLS 证书目录说明。执行前原文可在父提交的 `docs/appendix/configuration-files.md:7-24` 对照；权威页对应 `docs/configuration/config-files.md:7-49`。 | 配置结构页是完整目录树与加载说明的权威页；附录改为“目录树、加载关系及 vanilla 模板说明统一见[配置文件结构]”摘要链接，见 `docs/appendix/configuration-files.md:7-9`。文件和 URL 均保留。 |
+| 配置结构、核心配置文件、附录逐文件参考 | **不同角度，保留 1 组**。文本证据：结构页“从目录结构和加载关系理解配置”（`docs/configuration/config-files.md:5`）；核心页“深入三个最常打交道的文件”并聚焦字段（`docs/configuration/core-files.md:3-5`）；附录“按 vanilla 配置模板逐文件梳理”（`docs/appendix/configuration-files.md:3-5`）。 | 三页保留原内容并互链，明确结构/加载、关键文件操作、模板逐文件查阅三种角度；不硬并。 |
+
+### C：口径与实际状态
+
+- README 英文和中文现在说明这是个人学习笔记、心得与开发经验分享（`README.md:22`、`README.zh.md:16,22`）；首页与站点描述同步口径（`docs/index.md:6-7,17-23`、`docs/.vitepress/config.mts:8`）。
+- 移除总纲不准确的“35 篇”统计，改为“各篇笔记与附录”，见 `docs/knowledge.md:3`。目录结构审计中的执行前数量仅作为基线保留。
+- 移除正文中的“第 N 章”编号骨架，改为页面名称互引；示例见 `docs/modules/README.md:3,118`、`docs/advanced/README.md:5,9,13`、`docs/project/README.md:1,3,104-107`、`docs/project/asr-tts.md:1,75,187`、`docs/project/nlp.md:1,26,161,219-220`、`docs/project/implementation.md:1,208,260,264,391`、`docs/project/deployment.md:1`、`docs/advanced/events.md:115,180,243`、`docs/advanced/scripting.md:20,138`、`docs/advanced/recording.md:73`、`docs/modules/sip.md:58,73,124`、`docs/glossary.md:233,241,315`、`docs/appendix/resources.md:25,30,33,77`。
+- 侧栏配置注释不再声称从旧 SUMMARY 映射，也不再保留分组数字；见 `docs/.vitepress/config.mts:56-57`。核对未发现 sidebar 死条目；知识总纲和术语表已列在 sidebar，见 `docs/.vitepress/sidebar.json:7-12`。README 未列出不存在的目录。
+
+### 验收
+
+- `pnpm docs:build`：通过，VitePress 1.6.4 构建完成。
+- 本地 Markdown 链接扫描：**521 个链接，缺失 0**；侧边栏扫描：**36 个目标，缺失 0**；侧边栏重复链接：**0**。
+- `git diff --diff-filter=D --name-only | wc -l`：**0**（Markdown 删除数也为 0）。
+- 本次检查的外部网址可用性未逐一联网验证。

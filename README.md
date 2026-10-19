@@ -19,7 +19,7 @@ FreeSWITCH Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-
 
 ---
 
-A Chinese-language FreeSWITCH knowledge site covering installation and configuration, core concepts and the dial plan, module deep dives, scripts and ESL, and hands-on projects including an intelligent customer-service bot.
+A personal collection of FreeSWITCH learning notes, practical takeaways, and development experience, shared from a game developer's perspective. It covers installation and configuration, core concepts, modules, scripts and ESL, and an intelligent customer-service project.
 
 ## Knowledge Map
 

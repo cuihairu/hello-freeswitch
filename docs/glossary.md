@@ -230,7 +230,7 @@ FreeSWITCH 与 PSTN/其他 SIP 域之间的互操作边界，负责协议与编�
 
 **出处**：[Voice recognition](https://en.wikipedia.org/wiki/Voice_recognition)
 
-**相关页**：[第 14 章 · 语音识别与合成](project/asr-tts.md)
+**相关页**：[语音识别与合成](project/asr-tts.md)
 
 ### 语音合成（TTS (Text-to-Speech)）
 
@@ -238,7 +238,7 @@ FreeSWITCH 与 PSTN/其他 SIP 域之间的互操作边界，负责协议与编�
 
 **出处**：[Speech synthesis](https://en.wikipedia.org/wiki/Speech_synthesis)
 
-**相关页**：[第 14 章 · 语音识别与合成](project/asr-tts.md)
+**相关页**：[语音识别与合成](project/asr-tts.md)
 
 ### 拨号音与号码分析（DID (Direct Inward Dialing)）
 
@@ -312,7 +312,7 @@ FreeSWITCH 与 PSTN/其他 SIP 域之间的互操作边界，负责协议与编�
 
 **出处**：[Natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing)
 
-**相关页**：[第 15 章 · 自然语言处理](project/nlp.md)
+**相关页**：[自然语言处理](project/nlp.md)
 
 ### 虚拟助手（Virtual Assistant）
 
