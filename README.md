@@ -13,7 +13,7 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-FreeSWITCH Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-freeswitch/)
+FreeSWITCH Learning Notes · [Read online](https://cuihairu.github.io/hello-freeswitch/)
 
 </div>
 
