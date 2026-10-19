@@ -13,17 +13,17 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-FreeSWITCH 个人学习笔记、心得与开发经验分享 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/)
+FreeSWITCH 实践记录与开发经验分享 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/)
 
 </div>
 
 ---
 
-这是个人整理的 FreeSWITCH 学习笔记、实践心得与开发经验，以游戏开发者的视角记录安装配置、核心概念、模块、脚本与 ESL，以及智能客服项目中的经验。
+这里记录我以游戏开发者视角接触 FreeSWITCH 的实践：安装配置、核心概念、模块、脚本与 ESL，以及智能客服项目中的经验和踩坑记录。
 
 ## 知识地图
 
-[知识点总纲](https://cuihairu.github.io/hello-freeswitch/knowledge)把全站收拢成一页：核心概念、依据的书籍与官方文档、应用场景、常见坑，每条注明来源并链接回原文。
+[知识点总纲](https://cuihairu.github.io/hello-freeswitch/knowledge)把全站的核心概念、参考书籍与官方文档、应用场景和常见坑收在一页，并链接回对应记录。
 
 ## 本地开发
 

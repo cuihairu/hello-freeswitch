@@ -32,7 +32,7 @@ fs_cli -x "reload mod_conference"     # 重载单个模块（先 unload 再 load
 
 > 改 `sip_profiles` 用 `sofia profile <name> rescan` 可平滑重扫，改动监听地址/端口等核心参数则需 `restart`。
 
-## 本节内容
+## 配置记录索引
 
 - [配置文件结构](/configuration/config-files)——`conf/` 目录逐项说明与加载机制；
 - [核心配置文件](/configuration/core-files)——`freeswitch.xml`、`vars.xml`、`modules.conf.xml` 深入；

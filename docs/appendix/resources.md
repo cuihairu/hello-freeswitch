@@ -1,6 +1,6 @@
 # 附录 C · 资源与参考文献
 
-本附录收录本手册引用与推荐的外部资源。收录原则：**只列确定存在且长期可访问的入口**；第三方项目变动频繁，遇到链接失效时以官方站点为锚点重新检索。
+这里列出本站引用的外部资源和我实际查阅时会用到的入口。收录原则：**只列确定存在且长期可访问的入口**；第三方项目变动频繁，遇到链接失效时以官方站点为锚点重新检索。
 
 ## 官方文档
 
@@ -12,7 +12,7 @@
 | 嵌入式脚本 API | <https://developer.signalwire.com/freeswitch/programming/scripting-apis> | 各语言脚本可用的对象与方法（session、event 等） |
 | 源码发布包 | <https://files.freeswitch.org/releases/freeswitch/> | 各版本源码压缩包（含 1.10 与 1.11 系列，最新稳定 1.11.3） |
 
-旧版 wiki（freeswitch.org/confluence）已迁移至上述 SignalWire 开发者门户，老教程里的 wiki 链接大多可以在新站检索到对应内容。
+旧版 wiki（freeswitch.org/confluence）已迁移至上述 SignalWire 开发者门户，旧资料里的 wiki 链接大多可以在新站检索到对应内容。
 
 ## 源码仓库
 
@@ -29,7 +29,7 @@
 | drachtio-freeswitch-modules | <https://github.com/mdslaney/drachtio-freeswitch-modules> | drachtio 社区的 FreeSWITCH 模块仓库，`mod_audio_fork` 位于 `modules/mod_audio_fork`（media bug 抓流送 WebSocket，语音 AI 集成的参考实现；原 drachtio 组织下的路径已失效，当前以此镜像为准） |
 | mod_audio_stream | <https://github.com/amigniter/mod_audio_stream> | WebSocket 双向音频流模块（语音识别与合成详述），需自行编译 |
 | Vosk | <https://github.com/alphacep/vosk-api> | 可自托管的开源离线 ASR（含中文模型），常与音频流模块配合 |
-| UniMRCP | <https://www.unimrcp.org/> | 开源 MRCP 客户端/服务端框架，`mod_unimrcp` 的底层依赖，官网含 FreeSWITCH 集成教程 |
+| UniMRCP | <https://www.unimrcp.org/> | 开源 MRCP 客户端/服务端框架，`mod_unimrcp` 的底层依赖，官网提供 FreeSWITCH 集成资料 |
 | SIPp | <https://github.com/SIPp/sipp> | SIP 协议级压测工具（实现智能客服功能压测提到的进阶方案） |
 
 ## 社区与会议
@@ -49,10 +49,10 @@
 | 书名 | 作者 | 说明 |
 | ---- | ---- | ---- |
 | *FreeSWITCH Cookbook*（2012, Packt） | Anthony Minessale 等 | 配方式问答，覆盖常见配置场景 |
-| *FreeSWITCH 1.2*（2013, Packt） | Anthony Minessale, Michael S. Collins, Darren Schreiber, Raymond Chandler | 早期系统教程，概念讲解仍然适用 |
+| *FreeSWITCH 1.2*（2013, Packt） | Anthony Minessale, Michael S. Collins, Darren Schreiber, Raymond Chandler | 早期系统资料，部分概念仍可参考 |
 | *FreeSWITCH 1.6 Cookbook*（2015, Packt） | Anthony Minessale II, Michael S. Collins, Giovanni Maruzzelli | 偏实操，含 ESL 与脚本示例 |
 | *Mastering FreeSWITCH*（2016, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 进阶主题：集群、安全、性能 |
-| *FreeSWITCH 1.8*（2017, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 较新的一本系统教程 |
+| *FreeSWITCH 1.8*（2017, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 较新版本的系统资料 |
 
 > 英文书基于的版本偏旧，配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。
 
@@ -66,16 +66,16 @@
 
 | 资源 | 链接 | 说明 |
 | ---- | ---- | ---- |
-| FreeSWITCH 中文社区 | <https://freeswitch.org.cn/> | 非官方中文社区站：博客、入门教程、社区活动与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方） |
+| FreeSWITCH 中文社区 | <https://freeswitch.org.cn/> | 非官方中文社区站：博客、入门资料、社区活动与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方） |
 | 社区开源书 | 见上站内链接 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》两本社区共创开源书，杜金房及各位贡献者（2016-2023），在线阅读 book.dujinfang.com，仍在写作更新中，案例导向 |
 | 知乎专栏 / 微信公众号 | 见上站内链接 | 中文圈动态与答疑（公众号 FreeSWITCH-CN） |
 
-中文资料检索建议：中文社区内容版本跨度大（1.2 到 1.11 都有），引用配置片段时先确认版本，再用本手册 [附录 A](/appendix/configuration-files) 对照 vanilla 模板核实。1.11 系列存在破坏性变更（mod_python 与约 30 个遗留模块移除、PCRE2 迁移），核对旧教程时注意。
+我查中文资料时会先核对版本：社区内容跨度大（1.2 到 1.11 都有），配置片段再用 [附录 A](/appendix/configuration-files) 的 vanilla 模板对照。1.11 系列存在破坏性变更（mod_python 与约 30 个遗留模块移除、PCRE2 迁移），旧资料需要留意这些差异。
 
 ## 本站导航
 
 - 智能客服项目记录：[智能客服项目概述](/project/README)、[语音识别与合成](/project/asr-tts)、[自然语言处理](/project/nlp)、[实现智能客服功能](/project/implementation)、[部署与运维](/project/deployment)；
-- 附录：[附录 A · 配置文件详解](/appendix/configuration-files)、[附录 B · 常用命令与工具](/appendix/commands)、本页。
+- 附录：[附录 A · 配置文件参考](/appendix/configuration-files)、[附录 B · 常用命令与工具](/appendix/commands)、本页。
 
 ## 参考资料
 

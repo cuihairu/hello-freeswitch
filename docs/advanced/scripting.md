@@ -1,6 +1,6 @@
 # 脚本与编程接口
 
-当拨号计划的表达力不够时，FreeSWITCH 提供两个方向的"编程出口"：一是内嵌脚本引擎（首选 Lua），二是 ESL（Event Socket Library）——外部程序通过 8021 端口连进来，把整个交换机当 API 用。本章讲 Lua 环境、JavaScript 的现状、ESL 协议概貌，并给出一个只用 Python 标准库、可直接运行的 inbound 客户端。
+当拨号计划的表达力不够时，我会考虑两个"编程出口"：内嵌脚本引擎（通常选 Lua），或 ESL（Event Socket Library）——外部程序通过 8021 端口连接，把交换机作为 API 使用。这里记录 Lua 环境、JavaScript 的现状、ESL 协议概貌，以及一个只用 Python 标准库、可直接运行的 inbound 客户端。
 
 ## Lua 环境
 
@@ -92,13 +92,13 @@ end
 
 ## JavaScript 环境
 
-老教程里常见的 `mod_spidermonkey`（JavaScript，API 命令 `jsrun`）**在 FreeSWITCH 1.10 里已经没有了**：它只在 1.2.x 时代的源码树里发布，从 1.4 起就被移出源码，此后再未回归。所以：
+旧资料里常见的 `mod_spidermonkey`（JavaScript，API 命令 `jsrun`）**在 FreeSWITCH 1.10 里已经没有了**：它只在 1.2.x 时代的源码树里发布，从 1.4 起就被移出源码，此后再未回归。因此：
 
 - 任何 `mod_spidermonkey` / `jsrun` 的用法在 1.10 上都跑不起来，查资料时注意甄别年代；
 - 内嵌脚本一律建议 Lua——这是 1.10 起唯一开箱即用的脚本引擎（mod_v8 在源码树里，但需要 V8 依赖，默认构建不启用）；
 - 如果团队技术栈是 JavaScript，不要强求内嵌脚本，改用 Node.js 写 ESL 外部程序（见下文），把 FreeSWITCH 当事件源和命令通道，架构上更清晰。
 
-1.11 系列还要多一层甄别：1.11.0 从源码树移除了 `mod_python`（`mod_python3` 保留）与约 30 个遗留模块（mod_h26x、mod_portaudio、mod_rayo 等），并把正则引擎迁移到 PCRE2，官方提示存在破坏性变更。引用 1.10 及更早教程里的模块名与正则写法时，先到官方 Release 说明确认是否还在。
+1.11 系列也有版本差异：1.11.0 从源码树移除了 `mod_python`（`mod_python3` 保留）与约 30 个遗留模块（mod_h26x、mod_portaudio、mod_rayo 等），并把正则引擎迁移到 PCRE2，官方提示存在破坏性变更。引用 1.10 及更早资料里的模块名与正则写法时，我会先对照官方 Release 说明确认。
 
 ## ESL 概述
 

@@ -1,6 +1,6 @@
 # 会议模块
 
-`mod_conference` 在 FreeSWITCH 内实现了一个多方会议桥（MCU）：音频按 profile 采样率混音，视频可按布局混屏。本章讲清配置结构、创建会议的方式、控制命令与录音/旁路输出。
+`mod_conference` 在 FreeSWITCH 内实现多方会议桥（MCU）：音频按 profile 采样率混音，视频可按布局混屏。这里记录配置结构、会议创建方式、控制命令和录音/旁路输出。
 
 ## mod_conference 概述
 

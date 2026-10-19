@@ -1,6 +1,6 @@
 # 部署与运维
 
-开发机能跑通不等于能上线。本章按"单节点 → 多节点 → 监控告警 → 故障排查"的顺序，把智能客服系统投产要做的决策与检查清一遍。命令均基于 FreeSWITCH 1.11.3 与源码安装前缀 `/usr/local/freeswitch`（其它安装方式替换前缀即可）。
+开发机能跑通不等于能上线。我按"单节点 → 多节点 → 监控告警 → 故障排查"整理智能客服系统投产时遇到的决策和检查。命令基于 FreeSWITCH 1.11.3 与源码安装前缀 `/usr/local/freeswitch`（其它安装方式替换前缀即可）。
 
 ## 单节点部署
 
@@ -290,10 +290,10 @@ CDR 与录音同样要轮转归档：CSV/录音按天打包上传对象存储后
 
 ## 相关阅读
 
-- [安装篇 · 在 Linux 上安装](/installation/linux)：源码安装与依赖；
-- [网络设置](/configuration/network)：端口、防火墙与 NAT 的完整讲解；
-- [核心配置文件](/configuration/core-files)：本章提到的 vars.xml、modules.conf.xml 细节；
-- [附录 A · 配置文件详解](/appendix/configuration-files)：conf/ 目录逐文件参考。
+- [在 Linux 上安装](/installation/linux)：源码安装与依赖；
+- [网络设置](/configuration/network)：端口、防火墙与 NAT；
+- [核心配置文件](/configuration/core-files)：这里提到的 vars.xml、modules.conf.xml 细节；
+- [附录 A · 配置文件参考](/appendix/configuration-files)：conf/ 目录逐文件参考。
 
 ## 参考资料
 

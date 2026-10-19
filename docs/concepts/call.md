@@ -79,7 +79,7 @@ fs_cli -x "uuid_transfer <uuid> 1003 XML default"
 | [会话 Session](/concepts/session) | 脚本视角的腿 | channel 的脚本封装对象 |
 | 呼叫 Call | 两条以上腿的组合 | bridge 起来的完整通话 |
 
-## 下一步
+## 相关记录
 
 - [通道 (Channel)](/concepts/channel)：深入状态机与变量；
 - [静态拨号计划](/concepts/static-dialplan)：亲手写出上面这通 1001→1002 的路由。

@@ -1,6 +1,6 @@
 # 模块概述
 
-FreeSWITCH 的本体只是一个很小的交换核心：媒体桥接、通道状态机、XML 配置引擎。SIP、会议、语音信箱、录音、编解码……所有具体能力都由**模块（module）**提供。本页是模块笔记的入口，相关记录分别介绍 [SIP](/modules/sip)、[IVR](/modules/ivr)、[会议](/modules/conference)、[网关](/modules/gateway)与[媒体处理](/modules/media)。
+FreeSWITCH 的本体是一个精简的交换核心：媒体桥接、通道状态机、XML 配置引擎。SIP、会议、语音信箱、录音、编解码等能力由**模块（module）**提供。模块相关的实践记录分为 [SIP](/modules/sip)、[IVR](/modules/ivr)、[会议](/modules/conference)、[网关](/modules/gateway)与[媒体处理](/modules/media)。
 
 ## 什么是模块
 
@@ -170,7 +170,7 @@ fs_cli -x "reload mod_conference"
 
 ## 相关阅读
 
-- [核心配置文件](/configuration/core-files)——`modules.conf.xml`、`vars.xml` 的字段级讲解；
+- [核心配置文件](/configuration/core-files)——`modules.conf.xml`、`vars.xml` 的字段记录；
 - [配置文件结构](/configuration/config-files)——`conf/` 目录全景与加载机制；
 - [SIP 模块](/modules/sip)——第一个要看的模块：mod_sofia；
 - [静态拨号计划](/concepts/static-dialplan)——application 如何在拨号计划里组合成路由；

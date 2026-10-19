@@ -149,7 +149,7 @@ print(read_msg(f))                # api/response + 当前通话
 s.close()
 ```
 
-拿到控制权后，`originate` 发起呼叫、`uuid_transfer` 转接、订阅 `event plain ALL` 监听全部事件——业务系统由此成为路由的真正决策者。ESL 详解见本手册高级功能篇。
+拿到控制权后，业务系统可以用 `originate` 发起呼叫、用 `uuid_transfer` 转接，并订阅 `event plain ALL` 监听全部事件，由此成为路由决策者。ESL 细节见[脚本与编程接口](/advanced/scripting)。
 
 ## 三种路线怎么选
 
@@ -161,9 +161,9 @@ s.close()
 
 生产实践通常是：**XML 承载高频固定规则（内线互拨、网关外呼），Lua 承载单号码内的逻辑分支，mod_xml_curl/ESL 承载跨系统的动态决策**。
 
-## 下一步
+## 相关记录
 
-本章完成基础篇全部内容。模块详解篇将覆盖 Sofia/IVR/会议/网关等模块的具体配置与命令，脚本与 ESL 编程在高级功能篇深入。
+静态和动态路由的记录到这里收尾。Sofia、IVR、会议与网关的配置和命令见[模块记录](/modules/README)，脚本与 ESL 见[脚本与编程接口](/advanced/scripting)。
 
 ## 参考资料
 

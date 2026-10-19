@@ -13,17 +13,17 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-FreeSWITCH Learning Notes · [Read online](https://cuihairu.github.io/hello-freeswitch/)
+FreeSWITCH Notes and Field Experience · [Read online](https://cuihairu.github.io/hello-freeswitch/)
 
 </div>
 
 ---
 
-A personal collection of FreeSWITCH learning notes, practical takeaways, and development experience, shared from a game developer's perspective. It covers installation and configuration, core concepts, modules, scripts and ESL, and an intelligent customer-service project.
+A personal collection of FreeSWITCH notes and development experience from a game developer's perspective. I record installation and configuration, core concepts, modules, scripts and ESL, along with lessons from an intelligent customer-service project.
 
 ## Knowledge Map
 
-The [knowledge map](https://cuihairu.github.io/hello-freeswitch/knowledge) consolidates the whole site into one page: core concepts, the books and official docs behind it, application scenarios, and common pitfalls, each entry linked back to its source page.
+The [knowledge map](https://cuihairu.github.io/hello-freeswitch/knowledge) gathers the site's core concepts, source books and official docs, application scenarios, and common pitfalls, with links back to the related notes.
 
 ## Local Development
 

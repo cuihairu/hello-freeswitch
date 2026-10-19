@@ -1,6 +1,6 @@
 # FreeSWITCH 的安装
 
-FreeSWITCH 的官方主战场是 Linux 服务器。本节介绍支持的平台、三种安装方式的取舍，并分别给出 Linux 与 Windows 的完整步骤。
+FreeSWITCH 主要运行在 Linux 服务器上。这里记录支持的平台、三种安装方式的取舍，以及 Linux 与 Windows 的安装过程。
 
 ## 支持平台
 
@@ -30,7 +30,7 @@ FreeSWITCH 的官方主战场是 Linux 服务器。本节介绍支持的平台�
 
 预期输出形如 `FreeSWITCH Version 1.11.x ...`（随安装版本）。随后用 `fs_cli` 进入控制台（回车出现 `freeswitch@...>` 提示符），执行 `status` 查看运行状态，`bye` 或按 `Ctrl+D` 退出。
 
-## 本节内容
+## 安装记录索引
 
 - [在 Linux 上安装](/installation/linux)：官方仓库与源码编译两条完整路线；
 - [在 Windows 上安装](/installation/windows)：安装包与 WSL2 方案。

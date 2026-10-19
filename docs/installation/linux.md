@@ -100,7 +100,7 @@ freeswitch@host> bye
 - 听不到声音：先确认 [网络设置](/configuration/network) 中的 RTP 端口段与防火墙放行；
 - 8021 端口只应监听 127.0.0.1，不要暴露到公网（ESL 仅限本地管理）。
 
-## 下一步
+## 相关记录
 
 进入 [FreeSWITCH 的基本配置](/configuration/README)，了解配置文件体系；若你在 Windows 上体验，转到 [在 Windows 上安装](/installation/windows)。
 

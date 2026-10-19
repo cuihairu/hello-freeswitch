@@ -1,6 +1,6 @@
 # 附录 B · 常用命令与工具
 
-本附录汇总日常运维与排障最常用的 `fs_cli` api 命令与系统工具。命令均对照 FreeSWITCH 1.11.3 源码核对过语法（`mod_commands`、`mod_sofia` 等），可放心照抄后按需替换参数。
+这里汇总我日常运维与排障常用的 `fs_cli` api 命令和系统工具。命令语法对照 FreeSWITCH 1.11.3 源码（`mod_commands`、`mod_sofia` 等）核过，使用时按实际环境替换参数。
 
 ## fs_cli 基本用法
 

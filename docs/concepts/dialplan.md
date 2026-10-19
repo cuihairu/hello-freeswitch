@@ -82,7 +82,7 @@ freeswitch@host> /log debug
 
 生产系统通常两者结合：固定路由走 XML，业务化路由（按用户归属、时段、计费）交给动态方案。
 
-## 下一步
+## 相关记录
 
 - [静态拨号计划](/concepts/static-dialplan)：XML 规则的字段级写法；
 - [动态拨号计划](/concepts/dynamic-dialplan)：用脚本与 XML 网关接管路由。

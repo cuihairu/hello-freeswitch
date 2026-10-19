@@ -2,7 +2,7 @@
 
 本页深入三个最常打交道的文件：根文件 `freeswitch.xml`、全局变量 `vars.xml`、模块加载表 `autoload_configs/modules.conf.xml`。
 
-这里聚焦关键文件的字段含义与操作检查；`conf/` 的目录和加载关系见[配置文件结构](/configuration/config-files)，vanilla 模板中的逐文件参考见[配置文件详解](/appendix/configuration-files)。
+这里记录关键文件的字段含义与操作检查；`conf/` 的目录和加载关系见[配置文件结构](/configuration/config-files)，vanilla 模板中的逐文件参考见[配置文件参考](/appendix/configuration-files)。
 
 ## freeswitch.xml：配置的根
 
@@ -110,7 +110,7 @@
 3. 涉及 SIP 参数的，`fs_cli -x "sofia status profile internal"` 核对运行值；
 4. 打一通测试呼叫，`fs_cli -x "show channels"` 观察通道变量。
 
-## 下一步
+## 相关记录
 
 - [网络设置](/configuration/network)：把端口、防火墙与 NAT 调通；
 - [通道 (Channel)](/concepts/channel)：搞懂 `${var}` 背后的通道变量模型。

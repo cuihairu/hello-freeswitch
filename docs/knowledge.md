@@ -1,6 +1,6 @@
 # 知识点总纲
 
-> 本页把散在各篇笔记与附录里的知识点收拢成一页：核心概念、依据的书籍与官方文档、应用场景、常见坑。每条注明来源并链接回原文；查无实据的条目标「来源未考」。本仓没有独立的调研目录，来源就是站内各页本身；书籍与官方文档的链接出自[资源与参考文献](/appendix/resources.md)；术语的中英对照与出处见[术语表](/glossary)。
+> 这是我把散在各篇记录与附录里的知识点收拢后的索引：核心概念、参考书籍与官方文档、应用场景和常见坑。每条注明来源并链接回原文；查无实据的条目标「来源未考」。书籍与官方文档的链接出自[资源与参考文献](/appendix/resources.md)，术语的中英对照与出处见[术语表](/glossary)。
 
 ## 核心概念
 
@@ -54,7 +54,7 @@
 
 ### 事件系统与 ESL
 
-- 核心维护一条全局事件总线：产生（状态机与各模块发射）→ 分发（投递给所有命中的订阅者）→ 消费（内部模块、Lua 脚本、外部 ESL 客户端）。事件是广播语义，分发在独立线程进行，订阅者处理得慢不会阻塞通话主流程。见[事件系统](/advanced/events)、[进阶应用](/advanced/README)。
+- 核心维护一条全局事件总线：产生（状态机与各模块发射）→ 分发（投递给所有命中的订阅者）→ 消费（内部模块、Lua 脚本、外部 ESL 客户端）。事件是广播语义，分发在独立线程进行，订阅者处理得慢不会阻塞通话主流程。见[事件系统](/advanced/events)、[集成实践](/advanced/README)。
 - 一个事件由头部（`Event-Name`、`Core-UUID`、`Unique-ID` 等）与可选正文组成。监控系统的最小集合是 `CHANNEL_CREATE` + `CHANNEL_CALLSTATE` + `CHANNEL_HANGUP_COMPLETE`，足够还原每通电话的起止与过程。见[事件系统](/advanced/events)。
 - fs_cli 的 `/event`、`/filter`、`/log` 是 Event Socket 协议层命令，必须带 `/` 前缀；不带斜杠的输入会被自动加上 `api ` 前缀。见[事件系统](/advanced/events)。
 - `bgapi` 把命令丢到后台线程执行，立刻返回 Job-UUID，执行完成后事件总线广播一条 `BACKGROUND_JOB` 事件，正文就是命令输出。取异步结果的标准姿势是先订阅 `BACKGROUND_JOB` 再发 `bgapi`，按 Job-UUID 匹配。见[事件系统](/advanced/events)。
@@ -62,7 +62,7 @@
 
 ### 录音与监听
 
-- 三种录音入口：`record_session` 边通话边写盘、通话结束自动收尾；`uuid_record` 不进拨号计划，运维或外部程序对任意活着的通话随时开始/停止；`record` 录当前这条腿的输入音频，用于语音留言与 IVR 留言录入。见[录音与监听](/advanced/recording)、[进阶应用](/advanced/README)。
+- 三种录音入口：`record_session` 边通话边写盘、通话结束自动收尾；`uuid_record` 不进拨号计划，运维或外部程序对任意活着的通话随时开始/停止；`record` 录当前这条腿的输入音频，用于语音留言与 IVR 留言录入。见[录音与监听](/advanced/recording)、[集成实践](/advanced/README)。
 - `RECORD_STEREO=true` 双声道录音，左声道是收到的音频、右声道是发出的音频，事后可分开还原双方；`RECORD_MIN_SEC` 把短于该秒数的文件视为无效直接丢弃。见[录音与监听](/advanced/recording)。
 - 录音文件名主键用 `${uuid}`（通道变量，每通电话不同），与事件里的 `Unique-ID`、CDR 记录精确对上，是对账、回查的推荐做法；按天分目录，清理时整目录删除。见[录音与监听](/advanced/recording)。
 - `eavesdrop` 实时监听，被监听方无感知；监听者用 DTMF 按键控制听哪个方向（1 只听 A 腿、2 只听 B 腿、3 双向、0 静音）。见[录音与监听](/advanced/recording)。
@@ -70,7 +70,7 @@
 
 ### 脚本出口：Lua 与 ESL
 
-- Lua 是 FreeSWITCH 1.10 起唯一开箱即用的脚本引擎（mod_v8 在源码树里，但默认构建不启用）。老教程里常见的 `mod_spidermonkey`（JavaScript，API 命令 `jsrun`）从 1.4 起就被移出源码，1.10 上跑不起来，查资料时注意甄别年代。1.11.0 还移除了 `mod_python`（mod_python3 保留）与约 30 个遗留模块，并把正则迁移到 PCRE2。见[脚本与编程接口](/advanced/scripting)。、见[进阶应用](/advanced/README)
+- Lua 是 FreeSWITCH 1.10 起唯一开箱即用的脚本引擎（mod_v8 在源码树里，但默认构建不启用）。旧资料常提到的 `mod_spidermonkey`（JavaScript，API 命令 `jsrun`）从 1.4 起就被移出源码，1.10 上无法使用，查阅时需要核对资料年代。1.11.0 还移除了 `mod_python`（mod_python3 保留）与约 30 个遗留模块，并把正则迁移到 PCRE2。见[脚本与编程接口](/advanced/scripting)与[集成实践](/advanced/README)。
 - Lua 脚本有四种调用入口：dialplan application（`lua`，session 自动可用）、`lua` API（同步执行）、`luarun` API（后台线程，适合常驻脚本）、`startup-script`（随 FreeSWITCH 启动）。见[脚本与编程接口](/advanced/scripting)。
 - 脚本里任何操作前先判断 `session:ready()`，挂断后继续操作会抛错或静默失败；`playback` 的文件不存在会静默失败，排障时看 fs_cli 的 INFO 级日志。见[会话 (Session)](/concepts/session)。
 - ESL 是简单的文本协议：连接后服务端发 `auth/request`，客户端发 `auth ClueCon`，回 `+OK accepted` 后就能发 `event` 订阅、`api` 同步命令、`bgapi` 异步命令。只用 Python 标准库即可实现完整客户端。见[脚本与编程接口](/advanced/scripting)。
@@ -88,11 +88,11 @@
 | 书名 | 作者 / 年代 | 对应知识点 | 站内出处 |
 | ---- | ---- | ---- | ---- |
 | *FreeSWITCH Cookbook*（2012, Packt） | Anthony Minessale 等 | 配方式问答，覆盖常见配置场景 | [配置文件结构](/configuration/config-files) |
-| *FreeSWITCH 1.2*（2013, Packt） | Anthony Minessale, Michael S. Collins, Darren Schreiber, Raymond Chandler | 早期系统教程，概念讲解仍然适用 | [核心概念](/concepts/session) |
+| *FreeSWITCH 1.2*（2013, Packt） | Anthony Minessale, Michael S. Collins, Darren Schreiber, Raymond Chandler | 早期系统资料，概念部分仍然适用 | [核心概念](/concepts/session) |
 | *FreeSWITCH 1.6 Cookbook*（2015, Packt） | Anthony Minessale II, Michael S. Collins, Giovanni Maruzzelli | 偏实操，含 ESL 与脚本示例 | [脚本与编程接口](/advanced/scripting) |
 | *Mastering FreeSWITCH*（2016, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 进阶主题：集群、安全、性能 | [部署与运维](/project/deployment) |
-| *FreeSWITCH 1.8*（2017, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 较新的一本系统教程 | [核心概念](/concepts/session) |
-| 《FreeSWITCH 权威指南》 | 杜金房等著 | 国内 FreeSWITCH 的标杆图书，从 SIP 基础到 ESL/脚本与生产实践，中文读者的首选系统教材 | [资源与参考文献](/appendix/resources.md) |
+| *FreeSWITCH 1.8*（2017, Packt） | Anthony Minessale II, Giovanni Maruzzelli | 较新的一本系统资料 | [核心概念](/concepts/session) |
+| 《FreeSWITCH 权威指南》 | 杜金房等著 | 国内 FreeSWITCH 的标杆图书，内容从 SIP 基础延伸到 ESL、脚本与生产实践 | [资源与参考文献](/appendix/resources.md) |
 | 《FreeSWITCH 案例大全》《FreeSWITCH 参考手册》 | 杜金房及各位贡献者（2016-2023，在线共创，仍在写作更新中） | 社区开源书，案例导向，在线阅读（book.dujinfang.com），无正式出版社 | [资源与参考文献](/appendix/resources.md) |
 
 英文书基于的版本偏旧（1.2 到 1.8），配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。中文社区资料版本跨度大（1.2 到 1.11 都有），引用配置片段时先确认版本，再用 vanilla 模板核实；官方最新稳定为 1.11.3。见[资源与参考文献](/appendix/resources.md)。
@@ -109,8 +109,8 @@
 - [官方 GitHub 仓库](https://github.com/signalwire/freeswitch)：主仓库（SignalWire 赞助维护），Issue/PR 在此提交；vanilla 配置模板在 `conf/vanilla/`，systemd unit 在 `build/`。
 - [邮件列表](https://lists.freeswitch.org/)：freeswitch-users、freeswitch-dev 等，历史归档可全文检索，很多疑难杂症的答案都在旧帖里。
 - [ClueCon](https://www.cluecon.com/)：FreeSWITCH 创始团队创办的开发者大会，每年发布路线图与实战分享，演讲材料公开。
-- 与实战篇直接相关的第三方仓库：[drachtio-freeswitch-modules](https://github.com/mdslaney/drachtio-freeswitch-modules)（`mod_audio_fork`，语音 AI 集成的参考实现）、[mod_audio_stream](https://github.com/amigniter/mod_audio_stream)（WebSocket 双向音频流）、[Vosk](https://github.com/alphacep/vosk-api)（可自托管的开源离线 ASR，含中文模型）、[UniMRCP](https://www.unimrcp.org/)（开源 MRCP 框架，`mod_unimrcp` 的底层依赖）、[SIPp](https://github.com/SIPp/sipp)（SIP 协议级压测工具）。
-- [FreeSWITCH 中文社区](https://freeswitch.org.cn/)：非官方中文社区站，博客、入门教程与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方）。
+- 项目记录中用到的第三方仓库：[drachtio-freeswitch-modules](https://github.com/mdslaney/drachtio-freeswitch-modules)（`mod_audio_fork`，语音 AI 集成的参考实现）、[mod_audio_stream](https://github.com/amigniter/mod_audio_stream)（WebSocket 双向音频流）、[Vosk](https://github.com/alphacep/vosk-api)（可自托管的开源离线 ASR，含中文模型）、[UniMRCP](https://www.unimrcp.org/)（开源 MRCP 框架，`mod_unimrcp` 的底层依赖）、[SIPp](https://github.com/SIPp/sipp)（SIP 协议级压测工具）。
+- [FreeSWITCH 中文社区](https://freeswitch.org.cn/)：非官方中文社区站，包含博客、入门资料与版本动态。官方站 freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch（SignalWire 为项目维护方）。
 
 ## 应用场景
 
@@ -180,7 +180,7 @@ NLP 的三项基础能力是意图识别、实体抽取、对话管理，见[自
 
 - 英文书基于 1.2 到 1.8，配置项变化不大但模块生态更新较快，阅读时以官方手册为准绳。见[资源与参考文献](/appendix/resources.md)。
 - 中文社区内容版本跨度大（1.2 到 1.11 都有），引用配置片段时先确认版本，再用 vanilla 模板核实。见[资源与参考文献](/appendix/resources.md)。
-- 1.11 系列有破坏性变更：1.11.0 移除 `mod_python`（mod_python3 保留）与约 30 个遗留模块（mod_h26x、mod_portaudio、mod_rayo 等），正则引擎迁移到 PCRE2；引用 1.10 及更早教程的模块名与正则写法前，先到官方 Release 说明确认。见[脚本与编程接口](/advanced/scripting)、[资源与参考文献](/appendix/resources.md)。
+- 1.11 系列有破坏性变更：1.11.0 移除 `mod_python`（mod_python3 保留）与约 30 个遗留模块（mod_h26x、mod_portaudio、mod_rayo 等），正则引擎迁移到 PCRE2；引用 1.10 及更早资料中的模块名与正则写法前，先到官方 Release 说明确认。见[脚本与编程接口](/advanced/scripting)、[资源与参考文献](/appendix/resources.md)。
 - 社区音频流模块（`mod_audio_stream`、`mod_audio_fork`）不在官方源码树与发行包里，需自行编译；这类仓库更迭频繁、镜像众多，使用前先确认其公开仓库与维护状态。见[资源与参考文献](/appendix/resources.md)、[语音识别与合成](/project/asr-tts)。
 - 官方站域名已迁移：freeswitch.org 与 freeswitch.com 现均 301 至 signalwire.com/freeswitch，引用旧链接时注意重定向。见[资源与参考文献](/appendix/resources.md)。
 

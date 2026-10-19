@@ -5,7 +5,7 @@ import sidebar from './sidebar.json'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Hello FreeSWITCH',
-  description: 'FreeSWITCH 个人学习笔记与开发经验分享——安装配置、核心概念、拨号计划与项目实践',
+  description: 'FreeSWITCH 实践记录与开发经验分享——安装配置、核心概念、拨号计划与项目实践',
   base: '/hello-freeswitch/',
   cleanUrls: true,
   lastUpdated: true,
@@ -48,9 +48,9 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '引言', link: '/introduction/history' },
+      { text: '背景记录', link: '/introduction/history' },
       { text: '安装与配置', link: '/installation/README' },
-      { text: '核心概念', link: '/concepts/session' }
+      { text: '核心概念记录', link: '/concepts/session' }
     ],
 
     // sidebar.json 是唯一权威导航源；调整导航只编辑该文件

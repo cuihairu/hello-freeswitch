@@ -52,7 +52,7 @@ fs_cli.exe -x "show modules"
 
 控制台内执行 `status` 应看到 uptime 与活跃会话数为 0（尚未有呼叫）。
 
-## 下一步
+## 相关记录
 
 - [FreeSWITCH 的基本配置](/configuration/README)：配置文件体系；
 - [配置文件结构](/configuration/config-files)：`conf/` 目录逐项说明；

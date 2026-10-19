@@ -2,7 +2,7 @@
 
 FreeSWITCH 的配置是一棵以 XML 为骨架的树：根文件 `freeswitch.xml` 通过预处理指令把其它 XML"装配"进来，启动时一次性解析成内存中的配置模型。
 
-本页从目录结构和加载关系理解配置；常用文件的字段与操作见[核心配置文件](/configuration/core-files)，按 vanilla 模板逐文件查阅见[配置文件详解](/appendix/configuration-files)。三页侧重点不同，互为补充。
+这里记录配置目录结构和加载关系；常用文件的字段与操作见[核心配置文件](/configuration/core-files)，vanilla 模板的逐文件参考见[配置文件参考](/appendix/configuration-files)。三页侧重点不同，互为补充。
 
 ## conf/ 目录总览
 
@@ -91,9 +91,9 @@ conf/
 - 新增内网网关：在 `sip_profiles/external/` 加网关 XML，`fs_cli -x "sofia profile external rescan"` 装载；
 - 新增拨号规则：优先放 `dialplan/default/` 下的独立分片（如 `90-myapp.xml`），利用文件名前缀控制匹配顺序——`default.xml` 按 `<X-PRE-PROCESS>` 的 include 顺序合并文件，编号越小越先匹配。
 
-## 下一步
+## 相关记录
 
-- [核心配置文件](/configuration/core-files)：三大核心文件的字段级讲解；
+- [核心配置文件](/configuration/core-files)：三大核心文件的字段记录；
 - [网络设置](/configuration/network)：profile 监听与 NAT；
 - [静态拨号计划](/concepts/static-dialplan)：动手写第一条路由规则。
 

@@ -1,6 +1,6 @@
 # IVR 模块
 
-IVR（Interactive Voice Response，交互式语音应答）是「听提示音、按键、走分支」的总机逻辑。FreeSWITCH 内置两套实现：XML 定义的**菜单式 IVR**（`ivr_menus/`，由 `ivr` application 执行）与**脚本化 IVR**（Lua/ESL 自己控制收放号）。本章覆盖前者，并把两者串起来。
+IVR（Interactive Voice Response，交互式语音应答）是「听提示音、按键、走分支」的总机逻辑。FreeSWITCH 内置 XML 定义的**菜单式 IVR**（`ivr_menus/`，由 `ivr` application 执行）和**脚本化 IVR**（Lua/ESL 控制收放号）。这里以菜单式 IVR 为主，并记录两种实现如何配合。
 
 ## 什么是 IVR
 
@@ -190,7 +190,7 @@ end
 
 1. **菜单/短语接口化**：用 `mod_xml_curl` 绑定 `dialplan`、`phrase` 等 section，把菜单结构与提示语交给 HTTP 接口实时返回，菜单与话术随业务后台变更（机制见[动态拨号计划](/concepts/dynamic-dialplan)）；
 2. **呼叫控制接口化**：`mod_httapi` 让 HTTP 接口直接驱动这通电话——接口返回「放这段音、收 4 位号、转 1000」的动作序列，菜单逻辑完全在服务端代码里；
-3. **脚本 + 数据库**：Lua 脚本查库后动态拼 `transfer`/`bridge` 目标，或整通电话用 ESL 从外部程序发起与操控（见本手册高级功能篇）。
+3. **脚本 + 数据库**：Lua 脚本查库后动态拼 `transfer`/`bridge` 目标，或整通电话用 ESL 从外部程序发起与操控（见[脚本与编程接口](/advanced/scripting)）。
 
 语音识别与合成接入（`mod_flite`、`mod_tts_commandline`、`mod_pocketsphinx` 等模块提供 TTS/ASR 能力，需另行构建启用）可以把「按键选择」升级为「说话选择」，属于 IVR 与智能语音的衔接，实战部分再展开。
 

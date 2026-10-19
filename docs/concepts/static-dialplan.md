@@ -85,7 +85,7 @@ conf/dialplan/
 </extension>
 ```
 
-`sofia/gateway/<网关名>/<号码>` 的网关定义在 `sip_profiles/external/` 下；网关配置示例见本手册模块详解篇。
+`sofia/gateway/<网关名>/<号码>` 的网关定义在 `sip_profiles/external/` 下；配置示例见[网关模块记录](/modules/gateway)。
 
 ### 特征码：通话中转接
 
@@ -102,7 +102,7 @@ features.xml 中定义的特征码在通话进行中生效（先按 `*98` 进入
 3. `/log debug` 拨打测试号，观察 `Processing ... in context` 与 application 执行日志；
 4. 规则没命中时先查 `destination_number` 是否符合预期（`uuid_dump` 看变量真实值——正则里少写 `^`/`$` 是第一大坑）。
 
-## 下一步
+## 相关记录
 
 规则写死在文件里不够用时，转到 [动态拨号计划](/concepts/dynamic-dialplan)：用 Lua 脚本、mod_xml_curl 与 ESL 把路由交给代码与数据库。
 

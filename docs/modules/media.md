@@ -1,6 +1,6 @@
 # 媒体处理模块
 
-通话「接通」只是开始，声音与画面怎么编、怎么转、怎么调音量、怎么录下来，都由媒体处理相关模块决定。本章覆盖编解码与转码、`absolute_codec_string`、音频增益、视频编解码与录制，以及 mod_conference 的视频混屏。
+通话「接通」只是开始，声音与画面的编解码、转码、音量和录制都由媒体处理相关模块决定。这里汇总编解码与转码、`absolute_codec_string`、音频增益、视频编解码与录制，以及 mod_conference 视频混屏的实践记录。
 
 ## 编解码与转码
 
@@ -190,7 +190,7 @@ fs_cli -x "conference 3000 vid-banner 3 Welcome"           # 成员画面横幅�
 
 ## 相关阅读
 
-- [会议模块](/modules/conference)——会议的创建与成员控制，本章是其视频与媒体侧的延伸；
+- [会议模块](/modules/conference)——会议的创建与成员控制；本页补充视频与媒体侧的内容；
 - [SIP 模块](/modules/sip)——`inbound-codec-prefs` 等 profile 参数的上下文；
 - [网关模块](/modules/gateway)——外呼时用 `absolute_codec_string` 收窄编解码的实战；
 - [静态拨号计划](/concepts/static-dialplan)——`record_session`、`playback` 等 application 用法；

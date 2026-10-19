@@ -32,15 +32,15 @@ FreeSWITCH 的本质是三层能力的组合：
 
 两者都能搭建企业电话系统与联络中心；当项目涉及复杂媒体处理（转码、会议、录音）、WebRTC 网关或需要被外部程序深度控制时，FreeSWITCH 的架构优势更明显。
 
-## 适合谁阅读
+## 这份记录适用的场景
 
-本手册面向：
+这些记录主要来自以下需求场景：
 
 - 需要自建 PBX、语音网关或联络中心的运维与开发人员；
 - 要把语音能力集成进业务系统（智能客服、外呼通知、会议）的后端工程师；
-- 希望系统学习 FreeSWITCH 配置体系、拨号计划与 ESL 编程的初学者。
+- 正在熟悉 FreeSWITCH 配置体系、拨号计划与 ESL 编程的开发者。
 
-阅读本章后，可继续阅读 [FreeSWITCH 的应用场景](/introduction/scenarios) 了解典型用法，或直接跳到 [FreeSWITCH 的安装](/installation/README) 动手部署。
+我把常见用法整理在 [FreeSWITCH 的应用场景](/introduction/scenarios)，安装记录在 [FreeSWITCH 的安装](/installation/README)。
 
 ## 参考资料
 

@@ -75,7 +75,7 @@ Call-Direction: inbound
 
 `fs_cli` 本身就是一个 ESL 客户端。其中 `/event`、`/filter`、`/log` 等少数几条命令由 fs_cli 以 ESL 协议原样发给 FreeSWITCH，正好可以用来订阅事件。
 
-### 订阅演示
+### 订阅示例
 
 进入 `fs_cli` 后输入：
 
@@ -177,7 +177,7 @@ bgapi originate user/1001 &echo()
 ...等待事件，按 Job-UUID 匹配...
 ```
 
-脚本与编程接口的 Python 示例完整演示了这条链路。
+这条链路也出现在[脚本与编程接口](/advanced/scripting)的 Python 示例中。
 
 ## 自定义事件
 

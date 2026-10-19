@@ -1,6 +1,6 @@
 [
   {
-    "text": "引言",
+    "text": "背景记录",
     "collapsed": true,
     "items": [
       {
@@ -99,7 +99,7 @@
     ]
   },
   {
-    "text": "模块详解",
+    "text": "模块记录",
     "link": "/modules/README",
     "collapsed": true,
     "items": [
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "text": "进阶应用",
+    "text": "集成实践",
     "link": "/advanced/README",
     "collapsed": true,
     "items": [
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "text": "实战项目：智能客服",
+    "text": "项目记录：智能客服",
     "link": "/project/README",
     "collapsed": true,
     "items": [

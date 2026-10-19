@@ -1,6 +1,6 @@
 # SIP 模块
 
-FreeSWITCH 与外界互通的每一通电话，几乎都从 `mod_sofia` 走。本篇先补齐 SIP 协议的最小必要知识，再讲 mod_sofia 的 profile 结构、internal/external 的关键参数，以及注册认证与防扫描。
+FreeSWITCH 与外界互通的电话几乎都从 `mod_sofia` 走。这里记录 SIP 协议基础、mod_sofia 的 profile 结构、internal/external 的关键参数，以及注册认证与防扫描时的观察。
 
 ## SIP 协议简介
 

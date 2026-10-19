@@ -1,12 +1,12 @@
-# 附录 A · 配置文件详解
+# 附录 A · 配置文件参考
 
-本附录按 FreeSWITCH 1.11.3 的 vanilla 配置模板（源码树 `conf/vanilla/`）逐文件梳理 `conf/` 目录：每个文件干什么、关键参数是什么、改完怎么生效。章节归属与字段细节可对照 [配置文件结构](/configuration/config-files) 与 [核心配置文件](/configuration/core-files) 两章。
+这份记录按 FreeSWITCH 1.11.3 的 vanilla 配置模板（源码树 `conf/vanilla/`）逐文件梳理 `conf/` 目录：每个文件的用途、关键参数和生效方式。目录关系与字段细节也可对照[配置文件结构](/configuration/config-files)和[核心配置文件](/configuration/core-files)。
 
 本页作为逐文件查阅参考；目录整体和加载关系见[配置文件结构](/configuration/config-files)，常用文件的字段与操作检查见[核心配置文件](/configuration/core-files)。
 
 ## 目录总览
 
-`conf/` 的完整目录树、加载关系及 vanilla 模板说明统一见[配置文件结构](/configuration/config-files)。本附录从这里开始按文件查阅各项用途、参数与生效方式。
+`conf/` 的完整目录树、加载关系及 vanilla 模板说明见[配置文件结构](/configuration/config-files)。下面按文件记录各项用途、参数与生效方式。
 
 ## freeswitch.xml
 

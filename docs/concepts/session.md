@@ -60,7 +60,7 @@ session:consoleLog("info", "用户输入: " .. digits .. "\n")
 - **inbound 连接**：直接发 `originate`、`uuid_transfer` 等命令操作任意通话；
 - **outbound 连接**：让 FreeSWITCH 把新通话"交给"外部程序（socket application），程序内以事件流的方式拿到该 channel 的全部变量与生命周期事件，等价于一个远程 session 处理器。
 
-ESL 编程详见本手册高级功能篇。
+ESL 编程记录见[脚本与编程接口](/advanced/scripting)。
 
 ## 生命周期与注意事项
 

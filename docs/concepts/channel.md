@@ -87,7 +87,7 @@ loopback 通道在状态机里的行为与真实 SIP 通道一致，是构造复
 | CS_EXECUTE | 180 Ringing / 183 Session Progress → 200 OK |
 | CS_HANGUP | BYE / CANCEL / 486 Busy |
 
-## 下一步
+## 相关记录
 
 - [会话 (Session)](/concepts/session)：channel 的脚本封装与 Lua API；
 - [路由与拨号计划](/concepts/dialplan)：CS_ROUTING 阶段的规则引擎。

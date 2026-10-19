@@ -1,6 +1,6 @@
 # 实现智能客服功能
 
-本章把前三章的零件装成整车：IVR 接入来电、语音识别拿到文本、NLP 判定意图、机器人应答或转坐席。所有示例代码都可以直接落地（Lua 片段经 `luac -p` 校验，Python 片段经语法编译校验），并标注了每一步对应的真实命令。
+这里把前几篇记录里的组件接起来：IVR 接入来电、语音识别拿到文本、NLP 判定意图，再由机器人应答或转坐席。示例代码经过相应校验（Lua 片段经 `luac -p`，Python 片段经语法编译），并标出对应命令。
 
 ## 客服流程设计
 
@@ -384,8 +384,8 @@ fs_cli -x "status"
 
 ## 相关阅读
 
-- [模块详解篇 · IVR](/modules/ivr)：内置 IVR 菜单（`ivr_menus/`）的配置写法，可与本章 Lua 方案二选一；
-- [录音与监听](/advanced/recording)：本章用到的录音 API 与路径变量完整说明；
+- [模块记录 · IVR](/modules/ivr)：内置 IVR 菜单（`ivr_menus/`）的配置写法，可与这里的 Lua 方案二选一；
+- [录音与监听](/advanced/recording)：这里用到的录音 API 与路径变量记录；
 - [脚本与编程接口](/advanced/scripting)：mod_lua 脚本 API 全集；
 - [事件系统](/advanced/events)：ESL 事件订阅、自定义事件的更多细节；
 - [部署与运维](/project/deployment)：这套系统上线后的运行与排障。
