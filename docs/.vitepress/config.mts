@@ -24,7 +24,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-freeswitch/favicon.svg' }]
   ],
 
-  // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
+  // SUMMARY.md 仅作遗留说明页，不维护导航；sidebar.json 是唯一权威导航源
   srcExclude: ['**/SUMMARY.md'],
 
   // 每页补 og 分享 meta（返回值与原 head 合并，不会覆盖默认项）
@@ -53,8 +53,7 @@ export default defineConfig({
       { text: '核心概念', link: '/concepts/session' }
     ],
 
-    // 由 mdbook SUMMARY.md 结构映射而来（vitepress-migration/parse_summary.py），
-    // 现有 7 个分组：引言 / 安装与配置 / 核心概念 / 模块详解 / 进阶应用 / 实战项目 / 附录
+    // sidebar.json 是唯一权威导航源；调整导航只编辑该文件
     sidebar: sidebar as never,
 
     socialLinks: [
