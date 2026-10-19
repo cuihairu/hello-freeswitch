@@ -2,6 +2,8 @@
 
 本页深入三个最常打交道的文件：根文件 `freeswitch.xml`、全局变量 `vars.xml`、模块加载表 `autoload_configs/modules.conf.xml`。
 
+这里聚焦关键文件的字段含义与操作检查；`conf/` 的目录和加载关系见[配置文件结构](/configuration/config-files)，vanilla 模板中的逐文件参考见[配置文件详解](/appendix/configuration-files)。
+
 ## freeswitch.xml：配置的根
 
 它本身几乎不写业务逻辑，只做两件事：装配其它文件、声明配置的 section 布局（见 [配置文件结构](/configuration/config-files)）。日常运维很少改它，改得最多的是它装配进来的三个部分：

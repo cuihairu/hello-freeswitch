@@ -2,24 +2,11 @@
 
 本附录按 FreeSWITCH 1.11.3 的 vanilla 配置模板（源码树 `conf/vanilla/`）逐文件梳理 `conf/` 目录：每个文件干什么、关键参数是什么、改完怎么生效。章节归属与字段细节可对照 [配置文件结构](/configuration/config-files) 与 [核心配置文件](/configuration/core-files) 两章。
 
+本页作为逐文件查阅参考；目录整体和加载关系见[配置文件结构](/configuration/config-files)，常用文件的字段与操作检查见[核心配置文件](/configuration/core-files)。
+
 ## 目录总览
 
-```
-conf/
-├── freeswitch.xml        根文件：装配其它文件、声明 section
-├── vars.xml              全局变量（$${...}）
-├── mime.types            内置 HTTP 文件类型表
-├── autoload_configs/     各模块配置（*.conf.xml）
-├── sip_profiles/         SIP profile 与网关
-├── dialplan/             拨号计划
-├── directory/            用户目录（分机账号）
-├── ivr_menus/            IVR 菜单定义
-├── lang/                 多语言提示音短语
-├── chatplan/             聊天（消息）路由计划
-└── skinny_profiles/      SCCP 话机 profile（用 mod_skinny 才需要）
-```
-
-模板里另有若干示例与模板文件（`config.FS0`、`extensions.conf`、`fur_elise.ttml`、`tetris.ttml`、`voicemail.tpl`、`web-vm.tpl` 等），只作演示，生产部署可删。vanilla 模板不含 TLS 证书目录：启用 TLS/WSS 时用 `scripts/gentls_cert` 生成自签证书，放到证书目录（默认 `conf/tls`，configure 的 `--with-certsdir` 可改）。
+`conf/` 的完整目录树、加载关系及 vanilla 模板说明统一见[配置文件结构](/configuration/config-files)。本附录从这里开始按文件查阅各项用途、参数与生效方式。
 
 ## freeswitch.xml
 

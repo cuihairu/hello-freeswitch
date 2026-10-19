@@ -2,6 +2,8 @@
 
 FreeSWITCH 的配置是一棵以 XML 为骨架的树：根文件 `freeswitch.xml` 通过预处理指令把其它 XML"装配"进来，启动时一次性解析成内存中的配置模型。
 
+本页从目录结构和加载关系理解配置；常用文件的字段与操作见[核心配置文件](/configuration/core-files)，按 vanilla 模板逐文件查阅见[配置文件详解](/appendix/configuration-files)。三页侧重点不同，互为补充。
+
 ## conf/ 目录总览
 
 以源码安装（前缀 `/usr/local/freeswitch`）为例：
