@@ -1,0 +1,185 @@
+[
+  {
+    "text": "Background Notes",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Knowledge Overview",
+        "link": "/knowledge"
+      },
+      {
+        "text": "Glossary",
+        "link": "/glossary"
+      },
+      {
+        "text": "A Brief History of Telephony",
+        "link": "/introduction/history"
+      },
+      {
+        "text": "What is FreeSWITCH",
+        "link": "/introduction/what-is-freeswitch"
+      },
+      {
+        "text": "FreeSWITCH Use Cases",
+        "link": "/introduction/scenarios"
+      }
+    ]
+  },
+  {
+    "text": "Installing & Configuring FreeSWITCH",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Installing FreeSWITCH",
+        "link": "/installation/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Install on Linux",
+            "link": "/installation/linux"
+          },
+          {
+            "text": "Install on Windows",
+            "link": "/installation/windows"
+          }
+        ]
+      },
+      {
+        "text": "Basic Configuration",
+        "link": "/configuration/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Configuration File Layout",
+            "link": "/configuration/config-files"
+          },
+          {
+            "text": "Core Configuration Files",
+            "link": "/configuration/core-files"
+          },
+          {
+            "text": "Network Settings",
+            "link": "/configuration/network"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Core Concepts",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Session",
+        "link": "/concepts/session"
+      },
+      {
+        "text": "Call",
+        "link": "/concepts/call"
+      },
+      {
+        "text": "Channel",
+        "link": "/concepts/channel"
+      },
+      {
+        "text": "Routing & Dialplan",
+        "link": "/concepts/dialplan",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Static Dialplan",
+            "link": "/concepts/static-dialplan"
+          },
+          {
+            "text": "Dynamic Dialplan",
+            "link": "/concepts/dynamic-dialplan"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Module Notes",
+    "link": "/modules/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "SIP Module",
+        "link": "/modules/sip"
+      },
+      {
+        "text": "IVR Module",
+        "link": "/modules/ivr"
+      },
+      {
+        "text": "Conference Module",
+        "link": "/modules/conference"
+      },
+      {
+        "text": "Gateway Module",
+        "link": "/modules/gateway"
+      },
+      {
+        "text": "Media Processing Module",
+        "link": "/modules/media"
+      }
+    ]
+  },
+  {
+    "text": "Integration Practice",
+    "link": "/advanced/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Event System",
+        "link": "/advanced/events"
+      },
+      {
+        "text": "Recording & Eavesdropping",
+        "link": "/advanced/recording"
+      },
+      {
+        "text": "Scripting & Programming Interfaces",
+        "link": "/advanced/scripting"
+      }
+    ]
+  },
+  {
+    "text": "Project Notes: Smart Customer Service",
+    "link": "/project/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Speech Recognition & Synthesis",
+        "link": "/project/asr-tts"
+      },
+      {
+        "text": "Natural Language Processing",
+        "link": "/project/nlp"
+      },
+      {
+        "text": "Implementing Smart Customer Service",
+        "link": "/project/implementation"
+      },
+      {
+        "text": "Deployment & Operations",
+        "link": "/project/deployment"
+      }
+    ]
+  },
+  {
+    "text": "Appendix",
+    "link": "/appendix/configuration-files",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Common Commands & Tools",
+        "link": "/appendix/commands"
+      },
+      {
+        "text": "Resources & References",
+        "link": "/appendix/resources"
+      }
+    ]
+  }
+]

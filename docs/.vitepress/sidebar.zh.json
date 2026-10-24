@@ -1,0 +1,185 @@
+[
+  {
+    "text": "背景记录",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "知识点总纲",
+        "link": "/zh/knowledge"
+      },
+      {
+        "text": "术语表",
+        "link": "/zh/glossary"
+      },
+      {
+        "text": "电话的发展史",
+        "link": "/zh/introduction/history"
+      },
+      {
+        "text": "什么是FreeSWITCH",
+        "link": "/zh/introduction/what-is-freeswitch"
+      },
+      {
+        "text": "FreeSWITCH的应用场景",
+        "link": "/zh/introduction/scenarios"
+      }
+    ]
+  },
+  {
+    "text": "FreeSWITCH安装与配置",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "FreeSWITCH 的安装",
+        "link": "/zh/installation/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "在 Linux 上安装",
+            "link": "/zh/installation/linux"
+          },
+          {
+            "text": "在 Windows 上安装",
+            "link": "/zh/installation/windows"
+          }
+        ]
+      },
+      {
+        "text": "FreeSWITCH 的基本配置",
+        "link": "/zh/configuration/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "配置文件结构",
+            "link": "/zh/configuration/config-files"
+          },
+          {
+            "text": "核心配置文件",
+            "link": "/zh/configuration/core-files"
+          },
+          {
+            "text": "网络设置",
+            "link": "/zh/configuration/network"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "FreeSWITCH 核心概念",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "会话 (Session)",
+        "link": "/zh/concepts/session"
+      },
+      {
+        "text": "呼叫 (Call)",
+        "link": "/zh/concepts/call"
+      },
+      {
+        "text": "通道 (Channel)",
+        "link": "/zh/concepts/channel"
+      },
+      {
+        "text": "路由与拨号计划 (Dialplan)",
+        "link": "/zh/concepts/dialplan",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "静态拨号计划",
+            "link": "/zh/concepts/static-dialplan"
+          },
+          {
+            "text": "动态拨号计划",
+            "link": "/zh/concepts/dynamic-dialplan"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "模块记录",
+    "link": "/zh/modules/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "SIP 模块",
+        "link": "/zh/modules/sip"
+      },
+      {
+        "text": "IVR 模块",
+        "link": "/zh/modules/ivr"
+      },
+      {
+        "text": "会议模块",
+        "link": "/zh/modules/conference"
+      },
+      {
+        "text": "网关模块",
+        "link": "/zh/modules/gateway"
+      },
+      {
+        "text": "媒体处理模块",
+        "link": "/zh/modules/media"
+      }
+    ]
+  },
+  {
+    "text": "集成实践",
+    "link": "/zh/advanced/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "事件系统",
+        "link": "/zh/advanced/events"
+      },
+      {
+        "text": "录音与监听",
+        "link": "/zh/advanced/recording"
+      },
+      {
+        "text": "脚本与编程接口",
+        "link": "/zh/advanced/scripting"
+      }
+    ]
+  },
+  {
+    "text": "项目记录：智能客服",
+    "link": "/zh/project/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "语音识别与合成",
+        "link": "/zh/project/asr-tts"
+      },
+      {
+        "text": "自然语言处理",
+        "link": "/zh/project/nlp"
+      },
+      {
+        "text": "实现智能客服功能",
+        "link": "/zh/project/implementation"
+      },
+      {
+        "text": "部署与运维",
+        "link": "/zh/project/deployment"
+      }
+    ]
+  },
+  {
+    "text": "附录",
+    "link": "/zh/appendix/configuration-files",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "常用命令与工具",
+        "link": "/zh/appendix/commands"
+      },
+      {
+        "text": "资源与参考文献",
+        "link": "/zh/appendix/resources"
+      }
+    ]
+  }
+]

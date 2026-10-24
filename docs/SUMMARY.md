@@ -1,5 +1,5 @@
-# 导航维护说明
+# Navigation Maintenance Note
 
-本站发布导航的唯一权威源是 [`sidebar.json`](.vitepress/sidebar.json)，由 VitePress 配置加载。此文件仅作为 mdBook 遗留入口保留，不再维护目录副本；请勿在此添加或修改导航条目。
+The only authoritative source for the published navigation is [`sidebar.en.json`](.vitepress/sidebar.en.json) (English, site root) and [`sidebar.zh.json`](.vitepress/sidebar.zh.json) (Simplified Chinese, `/zh/`), each loaded by the VitePress config for its own locale. This file is kept only as an mdBook legacy entry; it no longer holds a copy of the directory. Do not add or change navigation items here.
 
-需要调整站点导航时，只改 `.vitepress/sidebar.json`，并在本地构建检查。`SUMMARY.md` 被 VitePress 排除，不参与页面构建，也不生成 mdBook 目录。
+To change site navigation, edit those two sidebar files only, then check with a local build. `SUMMARY.md` is excluded from the VitePress build, so it produces no page and no mdBook directory.
