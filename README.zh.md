@@ -6,14 +6,9 @@
 
 # Hello FreeSWITCH
 
-<p align="center">
-  <img src="docs/public/badges/topic.svg" alt="topic" />
-  <img src="docs/public/badges/docs.svg" alt="docs" />
-  <img src="docs/public/badges/license.svg" alt="license" />
-  <img src="docs/public/badges/langs.svg" alt="langs" />
-</p>
+<p align="center"><a href="https://cuihairu.github.io/hello-freeswitch/zh/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-blue" alt="docs"></a> <img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /> <img src="docs/public/badges/license.svg" alt="license" /> <img src="docs/public/badges/langs.svg" alt="langs" /></p>
 
-FreeSWITCH 个人学习笔记、心得与开发经验分享 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/zh//) <a href="https://cuihairu.github.io/hello-freeswitch/zh/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-blue" alt="docs"></a>
+FreeSWITCH 个人学习笔记、心得与开发经验分享 · [在线阅读](https://cuihairu.github.io/hello-freeswitch/zh/)
 </div>
 
 ---
