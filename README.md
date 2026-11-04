@@ -1,8 +1,18 @@
+<div align="center">
+
 [English](README.md) | [中文](README.zh.md)
 
-<div align="center">
-  <img src="docs/public/logo.svg" width="64" height="64" alt="logo" />
-  <a href="https://cuihairu.github.io/hello-freeswitch/"><img src="https://img.shields.io/badge/docs-blue" alt="docs"></a> <img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /> <img src="docs/public/badges/license.svg" alt="license" /> <img src="docs/public/badges/langs.svg" alt="langs" />
+<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
+
+# Hello FreeSWITCH
+
+<p align="center">
+  <img src="docs/public/badges/topic.svg" alt="topic" />
+  <img src="docs/public/badges/docs.svg" alt="docs" />
+  <img src="docs/public/badges/license.svg" alt="license" />
+  <img src="docs/public/badges/langs.svg" alt="langs" />
+</p>
+
 </div>
 
 ---
@@ -16,10 +26,10 @@ The [knowledge map](https://cuihairu.github.io/hello-freeswitch/knowledge) gathe
 ## Local Development
 
 ```bash
-npm install          # Install dependencies
-npm run docs:dev     # Local development
-npm run docs:build   # Build to docs/.vitepress/dist
-npm run docs:preview # Preview the build locally
+pnpm install          # Install dependencies
+pnpm run docs:dev     # Local development
+pnpm run docs:build   # Build to docs/.vitepress/dist
+pnpm run docs:preview # Preview the build locally
 ```
 
 ## License
